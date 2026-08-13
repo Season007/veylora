@@ -5,20 +5,17 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport"
-      content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<meta name="description"
-      content="VEYLORA — Luxury Photography Collection">
+<meta name="description" content="VEYLORA — Luxury Photography Collection">
 
 <title>VEYLORA — Photography</title>
 
-
 <style>
 
-/* =========================================================
+/* =====================================================
    GLOBAL
-========================================================= */
+===================================================== */
 
 * {
     margin: 0;
@@ -31,991 +28,589 @@ html {
 }
 
 body {
-
     background: #050505;
-
     color: #f5f5f5;
-
-    font-family:
-        Arial,
-        Helvetica,
-        sans-serif;
-
+    font-family: Arial, Helvetica, sans-serif;
     overflow-x: hidden;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    NAVIGATION
-========================================================= */
+===================================================== */
 
 .navbar {
-
     position: fixed;
-
     top: 0;
     left: 0;
-
     width: 100%;
-
     height: 82px;
-
     padding: 0 5%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: space-between;
-
     z-index: 1000;
-
-    background:
-        rgba(5,5,5,0.93);
-
-    backdrop-filter:
-        blur(12px);
-
-    border-bottom:
-        1px solid #202020;
-
+    background: rgba(5,5,5,0.93);
+    backdrop-filter: blur(12px);
+    border-bottom: 1px solid #202020;
 }
-
 
 .logo {
-
     color: #ffffff;
-
     text-decoration: none;
-
     font-size: 25px;
-
     font-weight: 600;
-
     letter-spacing: 8px;
-
 }
-
 
 .nav-links {
-
     display: flex;
-
     align-items: center;
-
     gap: 35px;
-
 }
-
 
 .nav-links a {
-
     color: #bcbcbc;
-
     text-decoration: none;
-
     font-size: 11px;
-
     letter-spacing: 2px;
-
     text-transform: uppercase;
-
     transition: 0.3s;
-
 }
-
 
 .nav-links a:hover {
-
     color: white;
-
 }
-
 
 .account-btn {
-
     padding: 11px 18px;
-
     background: transparent;
-
     color: white;
-
-    border:
-        1px solid #555;
-
+    border: 1px solid #555;
     font-size: 10px;
-
     letter-spacing: 1.5px;
-
     cursor: pointer;
-
     transition: 0.3s;
-
 }
-
 
 .account-btn:hover {
-
     background: white;
-
     color: black;
-
     border-color: white;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    HERO
-========================================================= */
+===================================================== */
 
 .hero {
-
     height: 100vh;
-
     min-height: 650px;
-
     position: relative;
-
     display: flex;
-
     align-items: flex-end;
-
-    padding:
-        0 7% 100px;
+    padding: 0 7% 100px;
 
     background-image:
-
         linear-gradient(
             to bottom,
             rgba(0,0,0,0.05),
             rgba(0,0,0,0.9)
         ),
-
         url("Photos/1.jpeg");
 
     background-size: cover;
-
     background-position: center;
-
 }
-
 
 .hero-content {
-
     max-width: 900px;
-
 }
-
 
 .hero-small {
-
     font-size: 11px;
-
     letter-spacing: 5px;
-
     text-transform: uppercase;
-
     color: #cfcfcf;
-
     margin-bottom: 20px;
-
 }
-
 
 .hero h1 {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(65px, 11vw, 150px);
-
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(65px, 11vw, 150px);
     font-weight: 400;
-
     letter-spacing: 12px;
-
     line-height: 0.9;
-
     margin-bottom: 30px;
-
 }
-
 
 .hero-description {
-
     max-width: 520px;
-
     color: #cccccc;
-
     font-size: 15px;
-
     line-height: 1.8;
-
 }
-
 
 .scroll-indicator {
-
     position: absolute;
-
     right: 7%;
-
     bottom: 50px;
-
     font-size: 10px;
-
     letter-spacing: 3px;
-
     color: #aaa;
-
-    writing-mode:
-        vertical-rl;
-
+    writing-mode: vertical-rl;
 }
 
 
-/* =========================================================
+/* =====================================================
    COLLECTION
-========================================================= */
+===================================================== */
 
 .collection {
-
-    padding:
-        150px 6%;
-
+    padding: 150px 6%;
 }
-
 
 .section-header {
-
     display: flex;
-
     justify-content: space-between;
-
     align-items: flex-end;
-
     margin-bottom: 70px;
-
 }
-
 
 .section-number {
-
     font-size: 11px;
-
     letter-spacing: 4px;
-
     color: #777;
-
     margin-bottom: 15px;
-
 }
-
 
 .section-title {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(42px, 6vw, 80px);
-
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(42px, 6vw, 80px);
     font-weight: 400;
-
     line-height: 1;
-
 }
-
 
 .section-description {
-
     max-width: 330px;
-
     color: #777;
-
     font-size: 13px;
-
     line-height: 1.8;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    GALLERY
-========================================================= */
+===================================================== */
 
 .gallery {
-
     display: grid;
-
-    grid-template-columns:
-        repeat(12, 1fr);
-
+    grid-template-columns: repeat(12, 1fr);
     gap: 50px 25px;
-
 }
-
 
 .photo-card {
-
     position: relative;
-
     overflow: hidden;
-
 }
-
-
-/* CARD POSITIONS */
 
 .photo-card:nth-child(1) {
-
     grid-column: span 7;
-
 }
-
 
 .photo-card:nth-child(2) {
-
     grid-column: span 5;
-
     margin-top: 100px;
-
 }
-
 
 .photo-card:nth-child(3) {
-
     grid-column: span 5;
-
 }
-
 
 .photo-card:nth-child(4) {
-
     grid-column: span 7;
-
     margin-top: 100px;
-
 }
-
 
 .photo-card:nth-child(5) {
-
     grid-column: span 6;
-
 }
-
 
 .photo-card:nth-child(6) {
-
     grid-column: span 6;
-
     margin-top: 80px;
-
 }
-
 
 .photo-card:nth-child(7) {
-
     grid-column: span 4;
-
 }
-
 
 .photo-card:nth-child(8) {
-
     grid-column: span 4;
-
     margin-top: 70px;
-
 }
-
 
 .photo-card:nth-child(9) {
-
     grid-column: span 4;
-
 }
-
 
 .photo-card:nth-child(10) {
-
     grid-column: span 6;
-
 }
-
 
 .photo-card:nth-child(11) {
-
     grid-column: span 6;
-
     margin-top: 100px;
-
 }
-
 
 .photo-card:nth-child(12) {
-
     grid-column: span 7;
-
 }
-
 
 .photo-card:nth-child(13) {
-
     grid-column: span 5;
-
     margin-top: 90px;
-
 }
-
 
 .photo-card:nth-child(14) {
-
     grid-column: span 5;
-
 }
-
 
 .photo-card:nth-child(15) {
-
     grid-column: span 7;
-
     margin-top: 100px;
-
 }
 
 
-/* =========================================================
-   IMAGE
-========================================================= */
+/* =====================================================
+   IMAGES
+===================================================== */
 
 .image-container {
-
     position: relative;
-
     overflow: hidden;
-
     background: #111;
-
 }
 
-
 .image-container img {
-
     display: block;
-
     width: 100%;
-
     height: 520px;
-
     object-fit: cover;
-
-    filter:
-        grayscale(100%);
-
-    transition:
-        transform 0.8s ease,
-        filter 0.8s ease;
-
+    filter: grayscale(100%);
+    transition: transform 0.8s ease, filter 0.8s ease;
     cursor: pointer;
-
     user-select: none;
-
     -webkit-user-drag: none;
-
 }
 
-
-.photo-card:nth-child(2)
-.image-container img,
-
-.photo-card:nth-child(3)
-.image-container img,
-
-.photo-card:nth-child(7)
-.image-container img,
-
-.photo-card:nth-child(8)
-.image-container img,
-
-.photo-card:nth-child(9)
-.image-container img {
-
+.photo-card:nth-child(2) .image-container img,
+.photo-card:nth-child(3) .image-container img,
+.photo-card:nth-child(7) .image-container img,
+.photo-card:nth-child(8) .image-container img,
+.photo-card:nth-child(9) .image-container img {
     height: 430px;
+}
 
+.photo-card:hover .image-container img {
+    transform: scale(1.04);
+    filter: grayscale(0%);
 }
 
 
-.photo-card:hover
-.image-container img {
-
-    transform:
-        scale(1.04);
-
-    filter:
-        grayscale(0%);
-
-}
-
-
-/* =========================================================
+/* =====================================================
    IMAGE OVERLAY
-========================================================= */
+===================================================== */
 
 .image-overlay {
-
     position: absolute;
-
     inset: 0;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
-    background:
-        rgba(0,0,0,0.25);
-
+    background: rgba(0,0,0,0.25);
     opacity: 0;
-
     transition: 0.4s;
-
+    pointer-events: none;
 }
 
-
-.photo-card:hover
-.image-overlay {
-
+.photo-card:hover .image-overlay {
     opacity: 1;
-
 }
-
 
 .view-circle {
-
     width: 70px;
-
     height: 70px;
-
-    border:
-        1px solid white;
-
+    border: 1px solid white;
     border-radius: 50%;
-
     display: flex;
-
     align-items: center;
-
     justify-content: center;
-
     color: white;
-
     font-size: 10px;
-
     letter-spacing: 1px;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    PHOTO INFORMATION
-========================================================= */
+===================================================== */
 
 .photo-info {
-
     display: flex;
-
     justify-content: space-between;
-
+    align-items: center;
     gap: 20px;
-
-    padding:
-        18px 0 0;
-
+    padding: 18px 0 0;
 }
-
 
 .photo-number {
-
     color: #555;
-
     font-size: 11px;
-
     letter-spacing: 2px;
-
 }
-
 
 .photo-title {
-
     flex: 1;
-
 }
-
 
 .photo-title h3 {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-weight: 400;
-
     font-size: 19px;
-
     line-height: 1.3;
-
 }
-
 
 .photo-title p {
-
     color: #666;
-
     font-size: 10px;
-
     letter-spacing: 1px;
-
     text-transform: uppercase;
-
     margin-top: 7px;
-
 }
 
 
-/* =========================================================
-   DOWNLOAD
-========================================================= */
+/* =====================================================
+   PHOTO BUTTONS
+===================================================== */
 
+.photo-actions {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.view-full-btn,
 .download-btn {
-
-    align-self: center;
-
-    padding:
-        10px 16px;
-
+    padding: 10px 13px;
     background: transparent;
-
-    border:
-        1px solid #444;
-
     color: #aaa;
-
+    border: 1px solid #444;
     cursor: pointer;
-
-    font-size: 10px;
-
-    letter-spacing: 1px;
-
-    text-transform: uppercase;
-
+    font-size: 9px;
+    letter-spacing: 1.2px;
     transition: 0.3s;
-
+    white-space: nowrap;
 }
 
-
+.view-full-btn:hover,
 .download-btn:hover {
-
     background: white;
-
     color: black;
-
     border-color: white;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    ABOUT
-========================================================= */
+===================================================== */
 
 .about {
-
-    padding:
-        160px 10%;
-
-    border-top:
-        1px solid #1c1c1c;
-
-    border-bottom:
-        1px solid #1c1c1c;
+    padding: 160px 10%;
+    border-top: 1px solid #1c1c1c;
+    border-bottom: 1px solid #1c1c1c;
 
     display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
+    grid-template-columns: 1fr 1fr;
     gap: 100px;
-
 }
-
 
 .about-label {
-
     font-size: 10px;
-
     letter-spacing: 4px;
-
     color: #666;
-
     text-transform: uppercase;
-
     margin-bottom: 20px;
-
 }
-
 
 .about h2 {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
-    font-size:
-        clamp(45px, 6vw, 80px);
-
+    font-family: Georgia, "Times New Roman", serif;
+    font-size: clamp(45px, 6vw, 80px);
     font-weight: 400;
-
     line-height: 1;
-
 }
-
 
 .about-text {
-
     color: #999;
-
     font-size: 15px;
-
     line-height: 2;
-
     max-width: 500px;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    CREATOR
-========================================================= */
+===================================================== */
 
 .creator {
-
     margin-top: 45px;
-
     padding-top: 30px;
-
-    border-top:
-        1px solid #292929;
-
+    border-top: 1px solid #292929;
 }
-
 
 .creator-small {
-
     color: #666;
-
     font-size: 10px;
-
     letter-spacing: 4px;
-
     text-transform: uppercase;
-
     margin-bottom: 12px;
-
 }
-
 
 .creator-name {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 30px;
-
     font-weight: 400;
-
 }
-
 
 .creator-title {
-
     margin-top: 6px;
-
     color: #888;
-
     font-size: 11px;
-
     letter-spacing: 3px;
-
     text-transform: uppercase;
-
 }
 
 
-/* =========================================================
-   FULLSCREEN VIEWER
-========================================================= */
+/* =====================================================
+   FULL IMAGE VIEWER
+===================================================== */
 
 .viewer {
-
     position: fixed;
-
     inset: 0;
-
     z-index: 5000;
 
-    background:
-        rgba(0,0,0,0.98);
+    background: rgba(0,0,0,0.98);
 
     display: none;
 
     align-items: center;
-
     justify-content: center;
 
-    padding: 40px;
-
+    padding: 30px;
 }
-
 
 .viewer.active {
-
     display: flex;
-
 }
 
-
 .viewer img {
+    max-width: 94vw;
+    max-height: 90vh;
 
-    max-width: 92vw;
-
-    max-height: 88vh;
+    width: auto;
+    height: auto;
 
     object-fit: contain;
 
     user-select: none;
-
     -webkit-user-drag: none;
-
 }
 
-
 .viewer-close {
-
     position: absolute;
 
-    top: 25px;
+    top: 20px;
+    right: 30px;
 
-    right: 35px;
+    background: none;
+    border: none;
 
     color: white;
 
-    background: none;
-
-    border: none;
-
-    font-size: 40px;
-
+    font-size: 42px;
     font-weight: 200;
 
     cursor: pointer;
 
+    z-index: 10;
 }
 
+.viewer-close:hover {
+    color: #aaa;
+}
 
 .viewer-title {
-
     position: absolute;
 
-    left: 35px;
-
-    bottom: 30px;
+    left: 30px;
+    bottom: 25px;
 
     color: #aaa;
 
     font-size: 11px;
 
     letter-spacing: 2px;
-
 }
 
 
-/* =========================================================
-   DEMO LOGIN MODAL
-========================================================= */
+/* =====================================================
+   LOGIN MODAL
+===================================================== */
 
 .modal-overlay {
-
     position: fixed;
-
     inset: 0;
 
     z-index: 6000;
 
-    background:
-        rgba(0,0,0,0.86);
+    background: rgba(0,0,0,0.86);
 
-    backdrop-filter:
-        blur(10px);
+    backdrop-filter: blur(10px);
 
     display: none;
 
     align-items: center;
-
     justify-content: center;
 
     padding: 20px;
-
 }
-
 
 .modal-overlay.active {
-
     display: flex;
-
 }
 
-
 .modal {
-
     width: 100%;
-
     max-width: 430px;
 
     background: #0c0c0c;
 
-    border:
-        1px solid #333;
+    border: 1px solid #333;
 
     padding: 45px;
 
     position: relative;
-
 }
 
-
 .modal-close {
-
     position: absolute;
 
     top: 15px;
-
     right: 20px;
 
     background: none;
-
     border: none;
 
     color: #777;
@@ -1023,61 +618,35 @@ body {
     font-size: 25px;
 
     cursor: pointer;
-
 }
-
 
 .modal-close:hover {
-
     color: white;
-
 }
-
 
 .modal-label {
-
     font-size: 9px;
-
     letter-spacing: 4px;
-
     color: #666;
-
     text-transform: uppercase;
-
     margin-bottom: 15px;
-
 }
-
 
 .modal h2 {
-
-    font-family:
-        Georgia,
-        "Times New Roman",
-        serif;
-
+    font-family: Georgia, "Times New Roman", serif;
     font-size: 35px;
-
     font-weight: 400;
-
     margin-bottom: 10px;
-
 }
-
 
 .modal p {
-
     color: #777;
-
     font-size: 13px;
-
+    line-height: 1.7;
     margin-bottom: 30px;
-
 }
 
-
 .demo-provider {
-
     width: 100%;
 
     padding: 14px;
@@ -1088,8 +657,7 @@ body {
 
     color: #ddd;
 
-    border:
-        1px solid #333;
+    border: 1px solid #333;
 
     cursor: pointer;
 
@@ -1098,23 +666,15 @@ body {
     letter-spacing: 1px;
 
     transition: 0.3s;
-
 }
-
 
 .demo-provider:hover {
-
     background: white;
-
     color: black;
-
     border-color: white;
-
 }
 
-
 .modal-signup {
-
     text-align: center;
 
     margin-top: 20px;
@@ -1122,50 +682,39 @@ body {
     color: #555;
 
     font-size: 11px;
-
 }
 
-
 .modal-signup a {
-
     color: white;
 
     cursor: pointer;
 
     text-decoration: underline;
-
 }
 
-
 .demo-message {
-
     margin-top: 20px;
 
     padding: 12px;
 
-    border:
-        1px solid #333;
+    border: 1px solid #333;
 
     color: #888;
 
     font-size: 10px;
 
     line-height: 1.6;
-
 }
 
 
-/* =========================================================
+/* =====================================================
    FOOTER
-========================================================= */
+===================================================== */
 
 footer {
+    padding: 30px 6%;
 
-    padding:
-        30px 6%;
-
-    border-top:
-        1px solid #1c1c1c;
+    border-top: 1px solid #1c1c1c;
 
     display: flex;
 
@@ -1178,202 +727,158 @@ footer {
     letter-spacing: 2px;
 
     text-transform: uppercase;
+}
+
+
+/* =====================================================
+   RESPONSIVE
+===================================================== */
+
+@media (max-width: 1000px) {
+
+    .photo-actions {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .view-full-btn,
+    .download-btn {
+        width: 100%;
+    }
 
 }
 
 
-/* =========================================================
-   RESPONSIVE
-========================================================= */
-
 @media (max-width: 900px) {
 
-
     .nav-links {
-
         display: none;
-
     }
-
 
     .gallery {
-
-        grid-template-columns:
-            1fr 1fr;
-
+        grid-template-columns: 1fr 1fr;
         gap: 35px 15px;
-
     }
-
 
     .photo-card,
     .photo-card:nth-child(n) {
-
         grid-column: span 1;
-
         margin-top: 0;
-
     }
-
 
     .image-container img,
-    .photo-card:nth-child(n)
-    .image-container img {
-
+    .photo-card:nth-child(n) .image-container img {
         height: 400px;
-
     }
-
 
     .about {
-
         grid-template-columns: 1fr;
-
         gap: 50px;
-
-        padding:
-            100px 7%;
-
+        padding: 100px 7%;
     }
-
 }
 
 
 @media (max-width: 600px) {
 
-
     .navbar {
-
         height: 70px;
-
     }
-
 
     .logo {
-
         font-size: 19px;
-
         letter-spacing: 5px;
-
     }
-
 
     .account-btn {
-
-        padding:
-            8px 10px;
-
+        padding: 8px 10px;
         font-size: 9px;
-
     }
-
 
     .hero {
-
         min-height: 600px;
-
     }
-
 
     .hero h1 {
-
         letter-spacing: 7px;
-
     }
-
 
     .scroll-indicator {
-
         display: none;
-
     }
-
 
     .collection {
-
-        padding:
-            100px 6%;
-
+        padding: 100px 6%;
     }
-
 
     .section-header {
-
         display: block;
-
     }
-
 
     .section-description {
-
         margin-top: 25px;
-
     }
-
 
     .gallery {
-
         grid-template-columns: 1fr;
-
     }
-
 
     .photo-card,
     .photo-card:nth-child(n) {
-
         grid-column: span 1;
-
     }
-
 
     .image-container img,
-    .photo-card:nth-child(n)
-    .image-container img {
-
+    .photo-card:nth-child(n) .image-container img {
         height: 430px;
-
     }
-
 
     .photo-info {
-
         display: block;
-
     }
 
+    .photo-number {
+        margin-bottom: 10px;
+    }
 
-    .download-btn {
-
+    .photo-actions {
         margin-top: 15px;
-
+        flex-direction: row;
     }
 
+    .view-full-btn,
+    .download-btn {
+        flex: 1;
+    }
 
     .creator-name {
-
         font-size: 25px;
-
     }
-
 
     footer {
-
         display: block;
-
         text-align: center;
-
         line-height: 2;
-
     }
-
 
     .modal {
-
-        padding:
-            35px 25px;
-
+        padding: 35px 25px;
     }
 
+    .viewer {
+        padding: 15px;
+    }
+
+    .viewer img {
+        max-width: 96vw;
+        max-height: 85vh;
+    }
+
+    .viewer-title {
+        left: 15px;
+        bottom: 15px;
+        max-width: 70%;
+    }
 }
 
 </style>
@@ -1390,15 +895,9 @@ footer {
 
 <nav class="navbar">
 
-
-    <a
-        href="#home"
-        class="logo">
-
+    <a href="#home" class="logo">
         VEYLORA
-
     </a>
-
 
     <div class="nav-links">
 
@@ -1416,7 +915,6 @@ footer {
 
     </div>
 
-
     <button
         class="account-btn"
         onclick="openLogin()">
@@ -1424,7 +922,6 @@ footer {
         SIGN IN
 
     </button>
-
 
 </nav>
 
@@ -1434,27 +931,17 @@ footer {
      HERO
 ===================================================== -->
 
-<section
-    class="hero"
-    id="home">
-
+<section class="hero" id="home">
 
     <div class="hero-content">
 
-
         <div class="hero-small">
-
             Independent Photography
-
         </div>
 
-
         <h1>
-
             VEYLORA
-
         </h1>
-
 
         <p class="hero-description">
 
@@ -1465,16 +952,11 @@ footer {
 
         </p>
 
-
     </div>
-
 
     <div class="scroll-indicator">
-
         SCROLL TO EXPLORE
-
     </div>
-
 
 </section>
 
@@ -1484,32 +966,22 @@ footer {
      COLLECTION
 ===================================================== -->
 
-<section
-    class="collection"
-    id="collection">
-
+<section class="collection" id="collection">
 
     <div class="section-header">
-
 
         <div>
 
             <div class="section-number">
-
                 01 / COLLECTION
-
             </div>
 
-
             <h2 class="section-title">
-
                 Selected<br>
                 Works
-
             </h2>
 
         </div>
-
 
         <p class="section-description">
 
@@ -1520,17 +992,10 @@ footer {
 
         </p>
 
-
     </div>
 
 
-
-    <div
-        class="gallery"
-        id="gallery">
-
-    </div>
-
+    <div class="gallery" id="gallery"></div>
 
 </section>
 
@@ -1540,34 +1005,23 @@ footer {
      ABOUT
 ===================================================== -->
 
-<section
-    class="about"
-    id="about">
-
+<section class="about" id="about">
 
     <div>
 
-
         <div class="about-label">
-
-            02 / About VEYLORA
-
+            02 / ABOUT VEYLORA
         </div>
 
-
         <h2>
-
             Photography<br>
             Without Limits.
-
         </h2>
-
 
     </div>
 
 
     <div>
-
 
         <p class="about-text">
 
@@ -1592,37 +1046,23 @@ footer {
         </p>
 
 
-        <!-- CREATOR -->
-
         <div class="creator">
 
-
             <div class="creator-small">
-
                 Photographed &amp; Preserved By
-
             </div>
-
 
             <div class="creator-name">
-
                 Season Raj Gautam
-
             </div>
-
 
             <div class="creator-title">
-
                 CEO, VEYLORA
-
             </div>
-
 
         </div>
 
-
     </div>
-
 
 </section>
 
@@ -1634,34 +1074,26 @@ footer {
 
 <footer>
 
-
     <span>
-
         © 2026 VEYLORA
-
     </span>
-
 
     <span>
-
         Photography Archive
-
     </span>
-
 
 </footer>
 
 
 
 <!-- =====================================================
-     FULLSCREEN VIEWER
+     FULL IMAGE VIEWER
 ===================================================== -->
 
 <div
     class="viewer"
     id="viewer"
     onclick="closeViewer()">
-
 
     <button
         class="viewer-close"
@@ -1671,7 +1103,6 @@ footer {
 
     </button>
 
-
     <img
         id="viewerImage"
         src=""
@@ -1679,13 +1110,10 @@ footer {
         onclick="event.stopPropagation()"
         draggable="false">
 
-
     <div
         class="viewer-title"
         id="viewerTitle">
-
     </div>
-
 
 </div>
 
@@ -1699,9 +1127,7 @@ footer {
     class="modal-overlay"
     id="loginModal">
 
-
     <div class="modal">
-
 
         <button
             class="modal-close"
@@ -1711,20 +1137,13 @@ footer {
 
         </button>
 
-
         <div class="modal-label">
-
             VEYLORA ACCOUNT
-
         </div>
 
-
         <h2>
-
             Welcome.
-
         </h2>
-
 
         <p>
 
@@ -1776,9 +1195,7 @@ footer {
             Don't have an account?
 
             <a onclick="demoSignup()">
-
                 CREATE ACCOUNT
-
             </a>
 
         </div>
@@ -1794,9 +1211,7 @@ footer {
 
         </div>
 
-
     </div>
-
 
 </div>
 
@@ -1833,67 +1248,67 @@ const photos = [
     {
         file: "5.jpeg",
         title:
-            "Frozen Lake in Forbidden Kingdom, Beijing"
+        "Frozen Lake in Forbidden Kingdom, Beijing"
     },
 
     {
         file: "6.jpeg",
         title:
-            "View of the World's Tallest Mountain — KTM to Chengdu Flight"
+        "View of the World's Tallest Mountain — KTM to Chengdu Flight"
     },
 
     {
         file: "7.jpeg",
         title:
-            "Cold Water Stream Flowing from the Himalayas"
+        "Cold Water Stream Flowing from the Himalayas"
     },
 
     {
         file: "8.jpeg",
         title:
-            "Cold Water Stream Flowing from the Himalayas"
+        "Cold Water Stream Flowing from the Himalayas"
     },
 
     {
         file: "9.jpeg",
         title:
-            "A Hut in the Middle of the Jungle"
+        "A Hut in the Middle of the Jungle"
     },
 
     {
         file: "10.jpeg",
         title:
-            "Night Life in China"
+        "Night Life in China"
     },
 
     {
         file: "11.jpeg",
         title:
-            "Night Life in China"
+        "Night Life in China"
     },
 
     {
         file: "12.jpeg",
         title:
-            "Night Life in China"
+        "Night Life in China"
     },
 
     {
         file: "13.jpeg",
         title:
-            "Giant Wild Goose Pagoda, Xi'an"
+        "Giant Wild Goose Pagoda, Xi'an"
     },
 
     {
         file: "14.jpeg",
         title:
-            "Pearl Tower, Shanghai, China"
+        "Pearl Tower, Shanghai, China"
     },
 
     {
         file: "15.jpeg",
         title:
-            "Unicorn Paper Art, Shanghai, China"
+        "Unicorn Paper Art, Shanghai, China"
     }
 
 ];
@@ -1905,172 +1320,116 @@ const photos = [
 ===================================================== */
 
 const gallery =
-    document.getElementById(
-        "gallery"
-    );
+    document.getElementById("gallery");
 
 
-photos.forEach(
-    function(photo, index) {
+photos.forEach(function(photo, index) {
+
+    const card =
+        document.createElement("article");
+
+    card.className = "photo-card";
 
 
-        const card =
-            document.createElement(
-                "article"
-            );
+    card.innerHTML = `
 
+        <div class="image-container">
 
-        card.className =
-            "photo-card";
+            <img
+                src="Photos/${photo.file}"
+                alt="${photo.title}"
+                draggable="false"
+                onclick="openViewer(${index})">
 
+            <div class="image-overlay">
 
-        card.innerHTML = `
-
-            <div
-                class="image-container">
-
-
-                <img
-
-                    src="Photos/${photo.file}"
-
-                    alt="${photo.title}"
-
-                    draggable="false"
-
-                    onclick="
-                        openViewer(${index})
-                    ">
-
-
-                <div
-                    class="image-overlay">
-
-
-                    <div
-                        class="view-circle">
-
-                        VIEW
-
-                    </div>
-
-
+                <div class="view-circle">
+                    VIEW
                 </div>
 
+            </div>
+
+        </div>
+
+
+        <div class="photo-info">
+
+            <div class="photo-number">
+
+                ${String(index + 1).padStart(2, "0")}
 
             </div>
 
 
-            <div
-                class="photo-info">
+            <div class="photo-title">
+
+                <h3>
+                    ${photo.title}
+                </h3>
+
+                <p>
+                    VEYLORA Original
+                </p>
+
+            </div>
 
 
-                <div
-                    class="photo-number">
-
-                    ${String(index + 1)
-                        .padStart(2, "0")}
-
-                </div>
-
-
-                <div
-                    class="photo-title">
-
-
-                    <h3>
-
-                        ${photo.title}
-
-                    </h3>
-
-
-                    <p>
-
-                        VEYLORA Original
-
-                    </p>
-
-
-                </div>
-
+            <div class="photo-actions">
 
                 <button
-                    class="download-btn"
-                    onclick="
-                        requestDownload(${index})
-                    ">
+                    class="view-full-btn"
+                    onclick="openViewer(${index})">
 
-                    Download
+                    VIEW FULL IMAGE
 
                 </button>
 
 
+                <button
+                    class="download-btn"
+                    onclick="requestDownload(${index})">
+
+                    DOWNLOAD
+
+                </button>
+
             </div>
 
-        `;
+        </div>
+    `;
 
 
-        gallery.appendChild(
-            card
-        );
+    gallery.appendChild(card);
 
-    }
-);
+});
 
 
 
 /* =====================================================
-   VIEWER
+   FULL IMAGE VIEWER
 ===================================================== */
 
 function openViewer(index) {
 
+    const photo = photos[index];
 
-    const photo =
-        photos[index];
+    document.getElementById("viewerImage").src =
+        "Photos/" + photo.file;
 
-
-    document.getElementById(
-        "viewerImage"
-    ).src =
-        "Photos/" +
-        photo.file;
-
-
-    document.getElementById(
-        "viewerTitle"
-    ).textContent =
+    document.getElementById("viewerTitle").textContent =
         photo.title;
 
+    document.getElementById("viewer").classList.add("active");
 
-    document.getElementById(
-        "viewer"
-    ).classList.add(
-        "active"
-    );
-
-
-    document.body.style.overflow =
-        "hidden";
-
+    document.body.style.overflow = "hidden";
 }
-
 
 
 function closeViewer() {
 
+    document.getElementById("viewer").classList.remove("active");
 
-    document.getElementById(
-        "viewer"
-    ).classList.remove(
-        "active"
-    );
-
-
-    document.body.style.overflow =
-        "auto";
-
+    document.body.style.overflow = "auto";
 }
 
 
@@ -2079,108 +1438,63 @@ function closeViewer() {
    DOWNLOAD
 ===================================================== */
 
-let selectedPhoto =
-    null;
+let selectedPhoto = null;
 
 
 function requestDownload(index) {
 
-
-    selectedPhoto =
-        index;
-
+    selectedPhoto = index;
 
     openLogin();
-
 }
 
 
 function downloadPhoto() {
 
-
-    if (
-        selectedPhoto === null
-    ) {
-
+    if (selectedPhoto === null) {
         return;
-
     }
 
+    const photo = photos[selectedPhoto];
 
-    const photo =
-        photos[selectedPhoto];
-
-
-    const link =
-        document.createElement(
-            "a"
-        );
-
+    const link = document.createElement("a");
 
     link.href =
-        "Photos/" +
-        photo.file;
-
+        "Photos/" + photo.file;
 
     link.download =
-        photo.title +
-        ".jpeg";
+        photo.title + ".jpeg";
 
-
-    document.body.appendChild(
-        link
-    );
-
+    document.body.appendChild(link);
 
     link.click();
 
+    document.body.removeChild(link);
 
-    document.body.removeChild(
-        link
-    );
-
-
-    selectedPhoto =
-        null;
-
+    selectedPhoto = null;
 }
 
 
 
 /* =====================================================
-   LOGIN
+   LOGIN MODAL
 ===================================================== */
 
 function openLogin() {
 
+    document.getElementById("loginModal")
+        .classList.add("active");
 
-    document.getElementById(
-        "loginModal"
-    ).classList.add(
-        "active"
-    );
-
-
-    document.body.style.overflow =
-        "hidden";
-
+    document.body.style.overflow = "hidden";
 }
-
 
 
 function closeLogin() {
 
+    document.getElementById("loginModal")
+        .classList.remove("active");
 
-    document.getElementById(
-        "loginModal"
-    ).classList.remove(
-        "active"
-    );
-
-
-    document.body.style.overflow =
-        "auto";
-
+    document.body.style.overflow = "auto";
 }
 
 
@@ -2191,12 +1505,8 @@ function closeLogin() {
 
 function demoLogin(provider) {
 
-
     const message =
-        document.getElementById(
-            "demoMessage"
-        );
-
+        document.getElementById("demoMessage");
 
     message.innerHTML =
 
@@ -2209,20 +1519,13 @@ function demoLogin(provider) {
         "Your photograph will now download.";
 
 
-    setTimeout(
-        function() {
+    setTimeout(function() {
 
+        closeLogin();
 
-            closeLogin();
+        downloadPhoto();
 
-
-            downloadPhoto();
-
-
-        },
-        1000
-    );
-
+    }, 1000);
 }
 
 
@@ -2233,12 +1536,8 @@ function demoLogin(provider) {
 
 function demoSignup() {
 
-
     const message =
-        document.getElementById(
-            "demoMessage"
-        );
-
+        document.getElementById("demoMessage");
 
     message.innerHTML =
 
@@ -2260,14 +1559,9 @@ document.addEventListener(
     "keydown",
     function(event) {
 
-
-        if (
-            event.key === "Escape"
-        ) {
-
+        if (event.key === "Escape") {
 
             closeViewer();
-
 
             closeLogin();
 
@@ -2279,18 +1573,14 @@ document.addEventListener(
 
 
 /* =====================================================
-   IMAGE PROTECTION FOR DEMO
+   PREVENT IMAGE DRAGGING
 ===================================================== */
 
 document.addEventListener(
     "dragstart",
     function(event) {
 
-
-        if (
-            event.target.tagName ===
-            "IMG"
-        ) {
+        if (event.target.tagName === "IMG") {
 
             event.preventDefault();
 
@@ -2300,15 +1590,16 @@ document.addEventListener(
 );
 
 
+
+/* =====================================================
+   PREVENT RIGHT CLICK ON IMAGES
+===================================================== */
+
 document.addEventListener(
     "contextmenu",
     function(event) {
 
-
-        if (
-            event.target.tagName ===
-            "IMG"
-        ) {
+        if (event.target.tagName === "IMG") {
 
             event.preventDefault();
 
@@ -2318,7 +1609,6 @@ document.addEventListener(
 );
 
 </script>
-
 
 </body>
 
