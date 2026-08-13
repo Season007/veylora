@@ -5,19 +5,20 @@
 
 <meta charset="UTF-8">
 
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport"
+      content="width=device-width, initial-scale=1.0">
 
 <meta name="description"
-content="VEYLORA - Free Original Photography Collection">
+      content="VEYLORA — Luxury Photography Collection">
 
-<title>VEYLORA | Photography Collection</title>
+<title>VEYLORA — Photography</title>
 
 
 <style>
 
-/* =====================================================
-   RESET
-===================================================== */
+/* =========================================================
+   GLOBAL
+========================================================= */
 
 * {
     margin: 0;
@@ -31,27 +32,34 @@ html {
 
 body {
 
+    background: #050505;
+
+    color: #f5f5f5;
+
     font-family:
         Arial,
         Helvetica,
         sans-serif;
 
-    background: #080808;
-
-    color: white;
-
-    line-height: 1.5;
+    overflow-x: hidden;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    NAVIGATION
-===================================================== */
+========================================================= */
 
-nav {
+.navbar {
 
-    height: 75px;
+    position: fixed;
+
+    top: 0;
+    left: 0;
+
+    width: 100%;
+
+    height: 82px;
 
     padding: 0 5%;
 
@@ -61,45 +69,31 @@ nav {
 
     justify-content: space-between;
 
-    background: rgba(8,8,8,0.97);
+    z-index: 1000;
+
+    background:
+        rgba(5,5,5,0.93);
+
+    backdrop-filter:
+        blur(12px);
 
     border-bottom:
-        1px solid #292929;
-
-    position: sticky;
-
-    top: 0;
-
-    z-index: 1000;
+        1px solid #202020;
 
 }
 
 
 .logo {
 
-    font-size: 28px;
+    color: #ffffff;
 
-    font-weight: bold;
+    text-decoration: none;
 
-    letter-spacing: 5px;
+    font-size: 25px;
 
-}
+    font-weight: 600;
 
-
-.logo span {
-
-    color: #a855f7;
-
-}
-
-
-.nav-right {
-
-    display: flex;
-
-    align-items: center;
-
-    gap: 30px;
+    letter-spacing: 8px;
 
 }
 
@@ -108,16 +102,24 @@ nav {
 
     display: flex;
 
-    gap: 25px;
+    align-items: center;
+
+    gap: 35px;
 
 }
 
 
 .nav-links a {
 
-    color: #cccccc;
+    color: #bcbcbc;
 
     text-decoration: none;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
 
     transition: 0.3s;
 
@@ -126,65 +128,69 @@ nav {
 
 .nav-links a:hover {
 
-    color: #a855f7;
+    color: white;
 
 }
 
 
-.account-button {
+.account-btn {
 
-    padding:
-        11px 18px;
+    padding: 11px 18px;
 
-    background:
-        transparent;
-
-    border:
-        1px solid #a855f7;
-
-    border-radius: 7px;
+    background: transparent;
 
     color: white;
 
-    cursor: pointer;
+    border:
+        1px solid #555;
 
-    font-weight: bold;
+    font-size: 10px;
+
+    letter-spacing: 1.5px;
+
+    cursor: pointer;
 
     transition: 0.3s;
 
 }
 
 
-.account-button:hover {
+.account-btn:hover {
 
-    background: #a855f7;
+    background: white;
+
+    color: black;
+
+    border-color: white;
 
 }
 
 
-/* =====================================================
+/* =========================================================
    HERO
-===================================================== */
+========================================================= */
 
 .hero {
 
-    min-height: 620px;
+    height: 100vh;
+
+    min-height: 650px;
+
+    position: relative;
 
     display: flex;
 
-    align-items: center;
+    align-items: flex-end;
 
-    justify-content: center;
+    padding:
+        0 7% 100px;
 
-    text-align: center;
-
-    padding: 50px 20px;
-
-    background:
+    background-image:
 
         linear-gradient(
-            rgba(0,0,0,0.48),
-            rgba(0,0,0,0.93)
+            to bottom,
+            rgba(0,0,0,0.05),
+            rgba(0,0,0,0.9)
         ),
 
         url("Photos/1.jpeg");
@@ -203,165 +209,320 @@ nav {
 }
 
 
-.hero h1 {
+.hero-small {
 
-    font-size:
-        clamp(50px, 9vw, 100px);
+    font-size: 11px;
 
-    letter-spacing: 7px;
+    letter-spacing: 5px;
+
+    text-transform: uppercase;
+
+    color: #cfcfcf;
 
     margin-bottom: 20px;
 
 }
 
 
-.hero h1 span {
+.hero h1 {
 
-    color: #a855f7;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(65px, 11vw, 150px);
+
+    font-weight: 400;
+
+    letter-spacing: 12px;
+
+    line-height: 0.9;
+
+    margin-bottom: 30px;
 
 }
 
 
-.hero p {
+.hero-description {
 
-    font-size: 20px;
+    max-width: 520px;
 
     color: #cccccc;
 
-    margin-bottom: 35px;
+    font-size: 15px;
+
+    line-height: 1.8;
 
 }
 
 
-.hero-button {
+.scroll-indicator {
 
-    display: inline-block;
+    position: absolute;
+
+    right: 7%;
+
+    bottom: 50px;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
+    color: #aaa;
+
+    writing-mode:
+        vertical-rl;
+
+}
+
+
+/* =========================================================
+   COLLECTION
+========================================================= */
+
+.collection {
 
     padding:
-        15px 32px;
-
-    background: #a855f7;
-
-    color: white;
-
-    border-radius: 8px;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+        150px 6%;
 
 }
 
 
-.hero-button:hover {
+.section-header {
 
-    background: #9333ea;
+    display: flex;
 
-    transform:
-        translateY(-2px);
+    justify-content: space-between;
+
+    align-items: flex-end;
+
+    margin-bottom: 70px;
 
 }
 
 
-/* =====================================================
-   PHOTO SECTION
-===================================================== */
+.section-number {
 
-.photos-section {
+    font-size: 11px;
 
-    padding:
-        90px 5%;
+    letter-spacing: 4px;
+
+    color: #777;
+
+    margin-bottom: 15px;
 
 }
 
 
 .section-title {
 
-    text-align: center;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    margin-bottom: 55px;
+    font-size:
+        clamp(42px, 6vw, 80px);
 
-}
+    font-weight: 400;
 
-
-.section-title h2 {
-
-    font-size: 42px;
-
-    margin-bottom: 12px;
-
-}
-
-
-.section-title p {
-
-    color: #888888;
-
-    font-size: 17px;
+    line-height: 1;
 
 }
 
 
-/* =====================================================
+.section-description {
+
+    max-width: 330px;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =========================================================
    GALLERY
-===================================================== */
+========================================================= */
 
 .gallery {
 
     display: grid;
 
     grid-template-columns:
-        repeat(3, 1fr);
+        repeat(12, 1fr);
 
-    gap: 28px;
+    gap: 50px 25px;
 
 }
 
 
 .photo-card {
 
-    background: #121212;
-
-    border:
-        1px solid #292929;
-
-    border-radius: 14px;
+    position: relative;
 
     overflow: hidden;
 
-    transition: 0.3s;
+}
+
+
+/* CARD POSITIONS */
+
+.photo-card:nth-child(1) {
+
+    grid-column: span 7;
 
 }
 
 
-.photo-card:hover {
+.photo-card:nth-child(2) {
 
-    transform:
-        translateY(-5px);
+    grid-column: span 5;
 
-    border-color:
-        #a855f7;
-
-    box-shadow:
-        0 15px 40px
-        rgba(0,0,0,0.4);
+    margin-top: 100px;
 
 }
 
 
-.photo-card img {
+.photo-card:nth-child(3) {
 
-    width: 100%;
+    grid-column: span 5;
 
-    height: 320px;
+}
 
-    object-fit: contain;
+
+.photo-card:nth-child(4) {
+
+    grid-column: span 7;
+
+    margin-top: 100px;
+
+}
+
+
+.photo-card:nth-child(5) {
+
+    grid-column: span 6;
+
+}
+
+
+.photo-card:nth-child(6) {
+
+    grid-column: span 6;
+
+    margin-top: 80px;
+
+}
+
+
+.photo-card:nth-child(7) {
+
+    grid-column: span 4;
+
+}
+
+
+.photo-card:nth-child(8) {
+
+    grid-column: span 4;
+
+    margin-top: 70px;
+
+}
+
+
+.photo-card:nth-child(9) {
+
+    grid-column: span 4;
+
+}
+
+
+.photo-card:nth-child(10) {
+
+    grid-column: span 6;
+
+}
+
+
+.photo-card:nth-child(11) {
+
+    grid-column: span 6;
+
+    margin-top: 100px;
+
+}
+
+
+.photo-card:nth-child(12) {
+
+    grid-column: span 7;
+
+}
+
+
+.photo-card:nth-child(13) {
+
+    grid-column: span 5;
+
+    margin-top: 90px;
+
+}
+
+
+.photo-card:nth-child(14) {
+
+    grid-column: span 5;
+
+}
+
+
+.photo-card:nth-child(15) {
+
+    grid-column: span 7;
+
+    margin-top: 100px;
+
+}
+
+
+/* =========================================================
+   IMAGE
+========================================================= */
+
+.image-container {
+
+    position: relative;
+
+    overflow: hidden;
+
+    background: #111;
+
+}
+
+
+.image-container img {
 
     display: block;
 
-    background: #050505;
+    width: 100%;
+
+    height: 520px;
+
+    object-fit: cover;
+
+    filter:
+        grayscale(100%);
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
 
     cursor: pointer;
 
@@ -372,121 +533,359 @@ nav {
 }
 
 
-.photo-info {
+.photo-card:nth-child(2)
+.image-container img,
 
-    padding: 20px;
+.photo-card:nth-child(3)
+.image-container img,
 
-}
+.photo-card:nth-child(7)
+.image-container img,
 
+.photo-card:nth-child(8)
+.image-container img,
 
-.photo-info h3 {
+.photo-card:nth-child(9)
+.image-container img {
 
-    font-size: 20px;
-
-    margin-bottom: 8px;
-
-}
-
-
-.photo-info p {
-
-    color: #888888;
-
-    margin-bottom: 16px;
+    height: 430px;
 
 }
 
 
-.buttons {
+.photo-card:hover
+.image-container img {
+
+    transform:
+        scale(1.04);
+
+    filter:
+        grayscale(0%);
+
+}
+
+
+/* =========================================================
+   IMAGE OVERLAY
+========================================================= */
+
+.image-overlay {
+
+    position: absolute;
+
+    inset: 0;
 
     display: flex;
 
-    gap: 10px;
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(0,0,0,0.25);
+
+    opacity: 0;
+
+    transition: 0.4s;
 
 }
 
 
-.view-btn,
-.download-btn {
+.photo-card:hover
+.image-overlay {
+
+    opacity: 1;
+
+}
+
+
+.view-circle {
+
+    width: 70px;
+
+    height: 70px;
+
+    border:
+        1px solid white;
+
+    border-radius: 50%;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    color: white;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =========================================================
+   PHOTO INFORMATION
+========================================================= */
+
+.photo-info {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    gap: 20px;
+
+    padding:
+        18px 0 0;
+
+}
+
+
+.photo-number {
+
+    color: #555;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
+
+}
+
+
+.photo-title {
 
     flex: 1;
 
-    padding: 11px;
+}
 
-    border-radius: 7px;
+
+.photo-title h3 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-weight: 400;
+
+    font-size: 19px;
+
+    line-height: 1.3;
+
+}
+
+
+.photo-title p {
+
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
+
+    margin-top: 7px;
+
+}
+
+
+/* =========================================================
+   DOWNLOAD
+========================================================= */
+
+.download-btn {
+
+    align-self: center;
+
+    padding:
+        10px 16px;
+
+    background: transparent;
+
+    border:
+        1px solid #444;
+
+    color: #aaa;
 
     cursor: pointer;
 
-    font-weight: bold;
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+    text-transform: uppercase;
 
     transition: 0.3s;
 
 }
 
 
-.view-btn {
+.download-btn:hover {
 
     background: white;
 
     color: black;
 
-    border: none;
+    border-color: white;
 
 }
 
 
-.download-btn {
+/* =========================================================
+   ABOUT
+========================================================= */
 
-    background: transparent;
+.about {
 
-    color: #a855f7;
+    padding:
+        160px 10%;
 
-    border:
-        1px solid #a855f7;
+    border-top:
+        1px solid #1c1c1c;
 
-}
+    border-bottom:
+        1px solid #1c1c1c;
 
+    display: grid;
 
-.view-btn:hover {
+    grid-template-columns:
+        1fr 1fr;
 
-    background: #a855f7;
-
-    color: white;
-
-}
-
-
-.download-btn:hover {
-
-    background: #a855f7;
-
-    color: white;
+    gap: 100px;
 
 }
 
 
-/* =====================================================
-   FULL PHOTO VIEWER
-===================================================== */
+.about-label {
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    color: #666;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+
+}
+
+
+.about h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 1;
+
+}
+
+
+.about-text {
+
+    color: #999;
+
+    font-size: 15px;
+
+    line-height: 2;
+
+    max-width: 500px;
+
+}
+
+
+/* =========================================================
+   CREATOR
+========================================================= */
+
+.creator {
+
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top:
+        1px solid #292929;
+
+}
+
+
+.creator-small {
+
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+
+}
+
+
+.creator-name {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+
+}
+
+
+.creator-title {
+
+    margin-top: 6px;
+
+    color: #888;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+}
+
+
+/* =========================================================
+   FULLSCREEN VIEWER
+========================================================= */
 
 .viewer {
-
-    display: none;
 
     position: fixed;
 
     inset: 0;
 
-    background:
-        rgba(0,0,0,0.97);
+    z-index: 5000;
 
-    z-index: 3000;
+    background:
+        rgba(0,0,0,0.98);
+
+    display: none;
 
     align-items: center;
 
     justify-content: center;
 
-    padding: 30px;
+    padding: 40px;
 
 }
 
@@ -500,9 +899,9 @@ nav {
 
 .viewer img {
 
-    max-width: 95%;
+    max-width: 92vw;
 
-    max-height: 90vh;
+    max-height: 88vh;
 
     object-fit: contain;
 
@@ -513,48 +912,65 @@ nav {
 }
 
 
-.close-viewer {
+.viewer-close {
 
     position: absolute;
 
-    top: 15px;
+    top: 25px;
 
-    right: 30px;
-
-    font-size: 45px;
-
-    cursor: pointer;
+    right: 35px;
 
     color: white;
 
+    background: none;
+
+    border: none;
+
+    font-size: 40px;
+
+    font-weight: 200;
+
+    cursor: pointer;
+
 }
 
 
-.close-viewer:hover {
+.viewer-title {
 
-    color: #a855f7;
+    position: absolute;
+
+    left: 35px;
+
+    bottom: 30px;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    letter-spacing: 2px;
 
 }
 
 
-/* =====================================================
-   LOGIN OVERLAY
-===================================================== */
+/* =========================================================
+   DEMO LOGIN MODAL
+========================================================= */
 
-.overlay {
-
-    display: none;
+.modal-overlay {
 
     position: fixed;
 
     inset: 0;
 
+    z-index: 6000;
+
     background:
-        rgba(0,0,0,0.88);
+        rgba(0,0,0,0.86);
 
-    backdrop-filter: blur(8px);
+    backdrop-filter:
+        blur(10px);
 
-    z-index: 5000;
+    display: none;
 
     align-items: center;
 
@@ -565,7 +981,7 @@ nav {
 }
 
 
-.overlay.active {
+.modal-overlay.active {
 
     display: flex;
 
@@ -576,426 +992,201 @@ nav {
 
     width: 100%;
 
-    max-width: 450px;
+    max-width: 430px;
 
-    background: #151515;
-
-    border:
-        1px solid #333333;
-
-    border-radius: 16px;
-
-    padding: 35px;
-
-    text-align: center;
-
-    box-shadow:
-        0 25px 80px
-        rgba(0,0,0,0.8);
-
-}
-
-
-.modal h2 {
-
-    font-size: 28px;
-
-    margin-bottom: 10px;
-
-}
-
-
-.modal-description {
-
-    color: #888888;
-
-    margin-bottom: 25px;
-
-}
-
-
-/* =====================================================
-   LOGIN PROVIDERS
-===================================================== */
-
-.login-buttons {
-
-    display: flex;
-
-    flex-direction: column;
-
-    gap: 11px;
-
-}
-
-
-.provider {
-
-    width: 100%;
-
-    padding: 14px;
-
-    background: #202020;
+    background: #0c0c0c;
 
     border:
-        1px solid #333333;
+        1px solid #333;
 
-    border-radius: 8px;
+    padding: 45px;
 
-    color: white;
-
-    cursor: pointer;
-
-    font-size: 15px;
-
-    font-weight: bold;
-
-    transition: 0.3s;
+    position: relative;
 
 }
 
 
-.provider:hover {
+.modal-close {
 
-    background: #292929;
+    position: absolute;
 
-    border-color:
-        #a855f7;
+    top: 15px;
 
-}
+    right: 20px;
 
-
-.signup-link {
-
-    margin-top: 22px;
-
-    color: #888888;
-
-    font-size: 14px;
-
-}
-
-
-.signup-link a {
-
-    color: #a855f7;
-
-    text-decoration: none;
-
-    font-weight: bold;
-
-}
-
-
-.signup-link a:hover {
-
-    text-decoration: underline;
-
-}
-
-
-/* =====================================================
-   FREE DOWNLOAD NOTICE
-===================================================== */
-
-.free-notice {
-
-    margin-top: 20px;
-
-    padding: 12px;
-
-    background:
-        #102414;
-
-    border:
-        1px solid #285e32;
-
-    border-radius: 7px;
-
-    color: #6ee77b;
-
-    font-size: 13px;
-
-    line-height: 1.5;
-
-}
-
-
-/* =====================================================
-   DEMO NOTICE
-===================================================== */
-
-.demo-warning {
-
-    margin-top: 15px;
-
-    padding: 10px;
-
-    background:
-        #241e05;
-
-    border:
-        1px solid #5b4a00;
-
-    border-radius: 7px;
-
-    color: #e5c94a;
-
-    font-size: 12px;
-
-    line-height: 1.5;
-
-}
-
-
-/* =====================================================
-   CLOSE BUTTON
-===================================================== */
-
-.close-button {
-
-    margin-top: 20px;
-
-    background: transparent;
+    background: none;
 
     border: none;
 
-    color: #888888;
+    color: #777;
+
+    font-size: 25px;
 
     cursor: pointer;
 
 }
 
 
-.close-button:hover {
+.modal-close:hover {
 
     color: white;
 
 }
 
 
-/* =====================================================
-   SUCCESS
-===================================================== */
+.modal-label {
 
-.success {
+    font-size: 9px;
 
-    display: none;
+    letter-spacing: 4px;
 
-    margin-top: 20px;
+    color: #666;
 
-    padding: 15px;
-
-    background:
-        #102414;
-
-    border:
-        1px solid #285e32;
-
-    border-radius: 8px;
-
-    color: #6ee77b;
-
-    line-height: 1.6;
-
-}
-
-
-/* =====================================================
-   ABOUT
-===================================================== */
-
-.about {
-
-    padding:
-        100px 20px;
-
-    text-align: center;
-
-    background: #101010;
-
-    border-top:
-        1px solid #222222;
-
-}
-
-
-.about h2 {
-
-    font-size: 40px;
-
-    margin-bottom: 20px;
-
-}
-
-
-.about p {
-
-    max-width: 750px;
-
-    margin: auto;
-
-    color: #aaaaaa;
-
-    line-height: 1.8;
-
-    font-size: 17px;
-
-}
-
-
-/* =====================================================
-   CONTACT
-===================================================== */
-
-.contact {
-
-    padding:
-        100px 20px;
-
-    text-align: center;
-
-    background: #080808;
-
-    border-top:
-        1px solid #222222;
-
-}
-
-
-.contact h2 {
-
-    font-size: 40px;
+    text-transform: uppercase;
 
     margin-bottom: 15px;
 
 }
 
 
-.contact > p {
+.modal h2 {
 
-    color: #888888;
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
 
-    margin-bottom: 40px;
+    font-size: 35px;
 
-}
+    font-weight: 400;
 
-
-.contact-card {
-
-    max-width: 700px;
-
-    margin: auto;
-
-    display: grid;
-
-    grid-template-columns:
-        1fr 1fr;
-
-    gap: 20px;
+    margin-bottom: 10px;
 
 }
 
 
-.contact-item {
+.modal p {
 
-    display: flex;
+    color: #777;
 
-    align-items: center;
+    font-size: 13px;
 
-    gap: 18px;
+    margin-bottom: 30px;
 
-    text-align: left;
+}
 
-    padding: 25px;
 
-    background: #121212;
+.demo-provider {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin-bottom: 10px;
+
+    background: #111;
+
+    color: #ddd;
 
     border:
-        1px solid #292929;
+        1px solid #333;
 
-    border-radius: 12px;
+    cursor: pointer;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
 
     transition: 0.3s;
 
 }
 
 
-.contact-item:hover {
+.demo-provider:hover {
 
-    border-color:
-        #a855f7;
+    background: white;
 
-    transform:
-        translateY(-3px);
+    color: black;
 
-}
-
-
-.contact-icon {
-
-    font-size: 30px;
+    border-color: white;
 
 }
 
 
-.contact-item h3 {
-
-    margin-bottom: 7px;
-
-}
-
-
-.contact-item a {
-
-    color: #a855f7;
-
-    text-decoration: none;
-
-}
-
-
-/* =====================================================
-   FOOTER
-===================================================== */
-
-footer {
-
-    padding: 30px;
+.modal-signup {
 
     text-align: center;
 
-    color: #666666;
+    margin-top: 20px;
+
+    color: #555;
+
+    font-size: 11px;
+
+}
+
+
+.modal-signup a {
+
+    color: white;
+
+    cursor: pointer;
+
+    text-decoration: underline;
+
+}
+
+
+.demo-message {
+
+    margin-top: 20px;
+
+    padding: 12px;
+
+    border:
+        1px solid #333;
+
+    color: #888;
+
+    font-size: 10px;
+
+    line-height: 1.6;
+
+}
+
+
+/* =========================================================
+   FOOTER
+========================================================= */
+
+footer {
+
+    padding:
+        30px 6%;
 
     border-top:
-        1px solid #222222;
+        1px solid #1c1c1c;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    color: #555;
+
+    font-size: 10px;
+
+    letter-spacing: 2px;
+
+    text-transform: uppercase;
 
 }
 
 
-/* =====================================================
-   MOBILE
-===================================================== */
+/* =========================================================
+   RESPONSIVE
+========================================================= */
 
 @media (max-width: 900px) {
-
-    .gallery {
-
-        grid-template-columns:
-            repeat(2, 1fr);
-
-    }
-
-}
-
-
-@media (max-width: 650px) {
-
-    nav {
-
-        padding: 0 18px;
-
-    }
 
 
     .nav-links {
@@ -1005,12 +1196,117 @@ footer {
     }
 
 
-    .account-button {
+    .gallery {
+
+        grid-template-columns:
+            1fr 1fr;
+
+        gap: 35px 15px;
+
+    }
+
+
+    .photo-card,
+    .photo-card:nth-child(n) {
+
+        grid-column: span 1;
+
+        margin-top: 0;
+
+    }
+
+
+    .image-container img,
+    .photo-card:nth-child(n)
+    .image-container img {
+
+        height: 400px;
+
+    }
+
+
+    .about {
+
+        grid-template-columns: 1fr;
+
+        gap: 50px;
 
         padding:
-            9px 12px;
+            100px 7%;
 
-        font-size: 12px;
+    }
+
+}
+
+
+@media (max-width: 600px) {
+
+
+    .navbar {
+
+        height: 70px;
+
+    }
+
+
+    .logo {
+
+        font-size: 19px;
+
+        letter-spacing: 5px;
+
+    }
+
+
+    .account-btn {
+
+        padding:
+            8px 10px;
+
+        font-size: 9px;
+
+    }
+
+
+    .hero {
+
+        min-height: 600px;
+
+    }
+
+
+    .hero h1 {
+
+        letter-spacing: 7px;
+
+    }
+
+
+    .scroll-indicator {
+
+        display: none;
+
+    }
+
+
+    .collection {
+
+        padding:
+            100px 6%;
+
+    }
+
+
+    .section-header {
+
+        display: block;
+
+    }
+
+
+    .section-description {
+
+        margin-top: 25px;
 
     }
 
@@ -1022,25 +1318,59 @@ footer {
     }
 
 
-    .photo-card img {
+    .photo-card,
+    .photo-card:nth-child(n) {
 
-        height: auto;
-
-        min-height: 250px;
-
-    }
-
-
-    .contact-card {
-
-        grid-template-columns: 1fr;
+        grid-column: span 1;
 
     }
 
 
-    .hero {
+    .image-container img,
+    .photo-card:nth-child(n)
+    .image-container img {
 
-        min-height: 500px;
+        height: 430px;
+
+    }
+
+
+    .photo-info {
+
+        display: block;
+
+    }
+
+
+    .download-btn {
+
+        margin-top: 15px;
+
+    }
+
+
+    .creator-name {
+
+        font-size: 25px;
+
+    }
+
+
+    footer {
+
+        display: block;
+
+        text-align: center;
+
+        line-height: 2;
+
+    }
+
+
+    .modal {
+
+        padding:
+            35px 25px;
 
     }
 
@@ -1058,50 +1388,46 @@ footer {
      NAVIGATION
 ===================================================== -->
 
-<nav>
-
-    <div class="logo">
-
-        VEY<span>LORA</span>
-
-    </div>
+<nav class="navbar">
 
 
-    <div class="nav-right">
+    <a
+        href="#home"
+        class="logo">
 
-        <div class="nav-links">
+        VEYLORA
 
-            <a href="#home">
-                Home
-            </a>
-
-            <a href="#photos">
-                Photos
-            </a>
-
-            <a href="#about">
-                About
-            </a>
-
-            <a href="#contact">
-                Contact
-            </a>
-
-        </div>
+    </a>
 
 
-        <button
-            class="account-button"
-            onclick="openLogin()"
-        >
+    <div class="nav-links">
 
-            Sign In / Sign Up
+        <a href="#home">
+            Home
+        </a>
 
-        </button>
+        <a href="#collection">
+            Collection
+        </a>
+
+        <a href="#about">
+            About
+        </a>
 
     </div>
+
+
+    <button
+        class="account-btn"
+        onclick="openLogin()">
+
+        SIGN IN
+
+    </button>
+
 
 </nav>
+
 
 
 <!-- =====================================================
@@ -1110,227 +1436,104 @@ footer {
 
 <section
     class="hero"
-    id="home"
->
+    id="home">
+
 
     <div class="hero-content">
 
+
+        <div class="hero-small">
+
+            Independent Photography
+
+        </div>
+
+
         <h1>
 
-            VEY<span>LORA</span>
+            VEYLORA
 
         </h1>
 
 
-        <p>
+        <p class="hero-description">
 
-            Original photography.
-            Free to download.
+            A collection of photographs
+            capturing places, landscapes,
+            wildlife, architecture and
+            unforgettable moments.
 
         </p>
 
 
-        <a
-            href="#photos"
-            class="hero-button"
-        >
+    </div>
 
-            Explore Collection
 
-        </a>
+    <div class="scroll-indicator">
+
+        SCROLL TO EXPLORE
 
     </div>
+
 
 </section>
 
 
+
 <!-- =====================================================
-     PHOTO COLLECTION
+     COLLECTION
 ===================================================== -->
 
 <section
-    class="photos-section"
-    id="photos"
->
-
-    <div class="section-title">
-
-        <h2>
-
-            Photography Collection
-
-        </h2>
+    class="collection"
+    id="collection">
 
 
-        <p>
+    <div class="section-header">
 
-            Explore and download
-            original VEYLORA photographs.
+
+        <div>
+
+            <div class="section-number">
+
+                01 / COLLECTION
+
+            </div>
+
+
+            <h2 class="section-title">
+
+                Selected<br>
+                Works
+
+            </h2>
+
+        </div>
+
+
+        <p class="section-description">
+
+            Fifteen original photographs
+            documenting landscapes,
+            architecture, wildlife and
+            unforgettable moments.
 
         </p>
 
+
     </div>
+
 
 
     <div
         class="gallery"
-        id="gallery"
-    >
+        id="gallery">
 
     </div>
+
 
 </section>
 
-
-<!-- =====================================================
-     FULL PHOTO VIEWER
-===================================================== -->
-
-<div
-    class="viewer"
-    id="viewer"
-    onclick="closeViewer()"
->
-
-    <span
-        class="close-viewer"
-        onclick="closeViewer()"
-    >
-
-        &times;
-
-    </span>
-
-
-    <img
-        id="viewerImage"
-        src=""
-        alt="VEYLORA Photograph"
-        draggable="false"
-        onclick="event.stopPropagation()"
-    >
-
-</div>
-
-
-<!-- =====================================================
-     SIGN IN POPUP
-===================================================== -->
-
-<div
-    class="overlay"
-    id="loginOverlay"
->
-
-    <div class="modal">
-
-
-        <h2>
-
-            Sign In to Download
-
-        </h2>
-
-
-        <p class="modal-description">
-
-            Sign in or create a free account
-            to download this photograph.
-
-        </p>
-
-
-        <div class="free-notice">
-
-            ✓ All VEYLORA photographs
-            are free to download.
-
-        </div>
-
-
-        <div
-            class="login-buttons"
-            style="margin-top:20px;"
-        >
-
-
-            <button
-                class="provider"
-                onclick="demoLogin('Google')"
-            >
-
-                Continue with Google
-
-            </button>
-
-
-            <button
-                class="provider"
-                onclick="demoLogin('Apple')"
-            >
-
-                Continue with Apple
-
-            </button>
-
-
-            <button
-                class="provider"
-                onclick="demoLogin('Facebook')"
-            >
-
-                Continue with Facebook
-
-            </button>
-
-
-            <button
-                class="provider"
-                onclick="demoLogin('X / Twitter')"
-            >
-
-                Continue with X / Twitter
-
-            </button>
-
-
-        </div>
-
-
-        <div class="signup-link">
-
-            Don't have an account?
-
-            <a href="signup.html">
-
-                Create Account
-
-            </a>
-
-        </div>
-
-
-        <div class="demo-warning">
-
-            DEMO MODE —
-            Social authentication is currently simulated.
-
-        </div>
-
-
-        <button
-            class="close-button"
-            onclick="closeLogin()"
-        >
-
-            Cancel
-
-        </button>
-
-
-    </div>
-
-</div>
 
 
 <!-- =====================================================
@@ -1339,124 +1542,90 @@ footer {
 
 <section
     class="about"
-    id="about"
->
-
-    <h2>
-
-        About VEYLORA
-
-    </h2>
+    id="about">
 
 
-    <p>
-
-        VEYLORA is an independent photography
-        collection created to showcase
-        original photographs and creative
-        visual work.
-
-        Every photograph in this collection
-        represents a moment captured through
-        the photographer's perspective.
-
-    </p>
-
-</section>
+    <div>
 
 
-<!-- =====================================================
-     CONTACT
-===================================================== -->
+        <div class="about-label">
 
-<section
-    class="contact"
-    id="contact"
->
-
-    <h2>
-
-        Contact VEYLORA
-
-    </h2>
-
-
-    <p>
-
-        Have a question?
-        Get in touch with VEYLORA.
-
-    </p>
-
-
-    <div class="contact-card">
-
-
-        <div class="contact-item">
-
-            <span class="contact-icon">
-
-                📞
-
-            </span>
-
-
-            <div>
-
-                <h3>
-
-                    Phone
-
-                </h3>
-
-
-                <a
-                    href="tel:+7771234567890"
-                >
-
-                    +777 1234567890
-
-                </a>
-
-            </div>
+            02 / About VEYLORA
 
         </div>
 
 
-        <div class="contact-item">
+        <h2>
 
-            <span class="contact-icon">
+            Photography<br>
+            Without Limits.
 
-                ✉️
-
-            </span>
-
-
-            <div>
-
-                <h3>
-
-                    Email
-
-                </h3>
+        </h2>
 
 
-                <a
-                    href="mailto:hello@veylora.com"
-                >
+    </div>
 
-                    hello@veylora.com
 
-                </a>
+    <div>
+
+
+        <p class="about-text">
+
+            VEYLORA is an independent
+            photography project created
+            to preserve moments through
+            images.
+
+            <br><br>
+
+            From the streets of China to
+            the mountains of the Himalayas,
+            every photograph tells a small
+            story.
+
+            <br><br>
+
+            This collection is presented
+            as a visual archive of places,
+            experiences and memories.
+
+        </p>
+
+
+        <!-- CREATOR -->
+
+        <div class="creator">
+
+
+            <div class="creator-small">
+
+                Photographed &amp; Preserved By
 
             </div>
+
+
+            <div class="creator-name">
+
+                Season Raj Gautam
+
+            </div>
+
+
+            <div class="creator-title">
+
+                CEO, VEYLORA
+
+            </div>
+
 
         </div>
 
 
     </div>
 
+
 </section>
+
 
 
 <!-- =====================================================
@@ -1465,140 +1634,325 @@ footer {
 
 <footer>
 
-    © 2026 VEYLORA — All Rights Reserved.
+
+    <span>
+
+        © 2026 VEYLORA
+
+    </span>
+
+
+    <span>
+
+        Photography Archive
+
+    </span>
+
 
 </footer>
+
+
+
+<!-- =====================================================
+     FULLSCREEN VIEWER
+===================================================== -->
+
+<div
+    class="viewer"
+    id="viewer"
+    onclick="closeViewer()">
+
+
+    <button
+        class="viewer-close"
+        onclick="closeViewer()">
+
+        ×
+
+    </button>
+
+
+    <img
+        id="viewerImage"
+        src=""
+        alt="VEYLORA Photograph"
+        onclick="event.stopPropagation()"
+        draggable="false">
+
+
+    <div
+        class="viewer-title"
+        id="viewerTitle">
+
+    </div>
+
+
+</div>
+
+
+
+<!-- =====================================================
+     DEMO LOGIN
+===================================================== -->
+
+<div
+    class="modal-overlay"
+    id="loginModal">
+
+
+    <div class="modal">
+
+
+        <button
+            class="modal-close"
+            onclick="closeLogin()">
+
+            ×
+
+        </button>
+
+
+        <div class="modal-label">
+
+            VEYLORA ACCOUNT
+
+        </div>
+
+
+        <h2>
+
+            Welcome.
+
+        </h2>
+
+
+        <p>
+
+            Sign in to your VEYLORA
+            account before downloading
+            photographs.
+
+        </p>
+
+
+        <button
+            class="demo-provider"
+            onclick="demoLogin('Google')">
+
+            CONTINUE WITH GOOGLE
+
+        </button>
+
+
+        <button
+            class="demo-provider"
+            onclick="demoLogin('Apple')">
+
+            CONTINUE WITH APPLE
+
+        </button>
+
+
+        <button
+            class="demo-provider"
+            onclick="demoLogin('Facebook')">
+
+            CONTINUE WITH FACEBOOK
+
+        </button>
+
+
+        <button
+            class="demo-provider"
+            onclick="demoLogin('X / TWITTER')">
+
+            CONTINUE WITH X / TWITTER
+
+        </button>
+
+
+        <div class="modal-signup">
+
+            Don't have an account?
+
+            <a onclick="demoSignup()">
+
+                CREATE ACCOUNT
+
+            </a>
+
+        </div>
+
+
+        <div
+            class="demo-message"
+            id="demoMessage">
+
+            DEMO MODE — Authentication is
+            simulated for this local preview.
+            No real account is created.
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
 
 
 <script>
 
 /* =====================================================
-   PHOTO NAMES
+   PHOTO DATA
 ===================================================== */
 
-const photoNames = [
+const photos = [
 
-    "Pandas in Chengdu",
+    {
+        file: "1.jpeg",
+        title: "Pandas in Chengdu"
+    },
 
-    "Pandas in Chengdu",
+    {
+        file: "2.jpeg",
+        title: "Pandas in Chengdu"
+    },
 
-    "Pandas in Chengdu",
+    {
+        file: "3.jpeg",
+        title: "Pandas in Chengdu"
+    },
 
-    "Shanghai Pearl Tower",
+    {
+        file: "4.jpeg",
+        title: "Shanghai Pearl Tower"
+    },
 
-    "Frozen Lake in Forbidden Kingdom, Beijing",
+    {
+        file: "5.jpeg",
+        title:
+            "Frozen Lake in Forbidden Kingdom, Beijing"
+    },
 
-    "View of the World's Tallest Mountain — KTM to Chengdu Flight",
+    {
+        file: "6.jpeg",
+        title:
+            "View of the World's Tallest Mountain — KTM to Chengdu Flight"
+    },
 
-    "Cold Water Stream Flowing from the Himalayas",
+    {
+        file: "7.jpeg",
+        title:
+            "Cold Water Stream Flowing from the Himalayas"
+    },
 
-    "Cold Water Stream Flowing from the Himalayas",
+    {
+        file: "8.jpeg",
+        title:
+            "Cold Water Stream Flowing from the Himalayas"
+    },
 
-    "A Hut in the Middle of the Jungle",
+    {
+        file: "9.jpeg",
+        title:
+            "A Hut in the Middle of the Jungle"
+    },
 
-    "Night Life in China",
+    {
+        file: "10.jpeg",
+        title:
+            "Night Life in China"
+    },
 
-    "Night Life in China",
+    {
+        file: "11.jpeg",
+        title:
+            "Night Life in China"
+    },
 
-    "Night Life in China",
+    {
+        file: "12.jpeg",
+        title:
+            "Night Life in China"
+    },
 
-    "Giant Wild Goose Pagoda, Xi'an",
+    {
+        file: "13.jpeg",
+        title:
+            "Giant Wild Goose Pagoda, Xi'an"
+    },
 
-    "Pearl Tower, Shanghai, China",
+    {
+        file: "14.jpeg",
+        title:
+            "Pearl Tower, Shanghai, China"
+    },
 
-    "Unicorn Paper Art, Shanghai, China"
+    {
+        file: "15.jpeg",
+        title:
+            "Unicorn Paper Art, Shanghai, China"
+    }
 
 ];
 
 
+
 /* =====================================================
-   GALLERY
+   CREATE GALLERY
 ===================================================== */
 
 const gallery =
-    document.getElementById("gallery");
+    document.getElementById(
+        "gallery"
+    );
 
 
-for (
-    let i = 1;
-    i <= 15;
-    i++
-) {
-
-    gallery.innerHTML += `
-
-        <div class="photo-card">
+photos.forEach(
+    function(photo, index) {
 
 
-            <img
-
-                src="Photos/${i}.jpeg"
-
-                alt="${photoNames[i - 1]}"
-
-                draggable="false"
-
-                oncontextmenu="return false"
-
-                onclick="
-                    openViewer(
-                        'Photos/${i}.jpeg'
-                    )
-                "
-
-            >
+        const card =
+            document.createElement(
+                "article"
+            );
 
 
-            <div class="photo-info">
+        card.className =
+            "photo-card";
 
 
-                <h3>
+        card.innerHTML = `
 
-                    ${photoNames[i - 1]}
-
-                </h3>
-
-
-                <p>
-
-                    VEYLORA Original Photograph
-
-                </p>
+            <div
+                class="image-container">
 
 
-                <div class="buttons">
+                <img
+
+                    src="Photos/${photo.file}"
+
+                    alt="${photo.title}"
+
+                    draggable="false"
+
+                    onclick="
+                        openViewer(${index})
+                    ">
 
 
-                    <button
-
-                        class="view-btn"
-
-                        onclick="
-                            openViewer(
-                                'Photos/${i}.jpeg'
-                            )
-                        "
-
-                    >
-
-                        View Full
-
-                    </button>
+                <div
+                    class="image-overlay">
 
 
-                    <button
+                    <div
+                        class="view-circle">
 
-                        class="download-btn"
+                        VIEW
 
-                        onclick="
-                            requestDownload(${i})
-                        "
-
-                    >
-
-                        ⬇ Download Free
-
-                    </button>
+                    </div>
 
 
                 </div>
@@ -1607,40 +1961,111 @@ for (
             </div>
 
 
-        </div>
+            <div
+                class="photo-info">
 
-    `;
 
-}
+                <div
+                    class="photo-number">
+
+                    ${String(index + 1)
+                        .padStart(2, "0")}
+
+                </div>
+
+
+                <div
+                    class="photo-title">
+
+
+                    <h3>
+
+                        ${photo.title}
+
+                    </h3>
+
+
+                    <p>
+
+                        VEYLORA Original
+
+                    </p>
+
+
+                </div>
+
+
+                <button
+                    class="download-btn"
+                    onclick="
+                        requestDownload(${index})
+                    ">
+
+                    Download
+
+                </button>
+
+
+            </div>
+
+        `;
+
+
+        gallery.appendChild(
+            card
+        );
+
+    }
+);
+
 
 
 /* =====================================================
-   FULL PHOTO VIEWER
+   VIEWER
 ===================================================== */
 
-function openViewer(imagePath) {
+function openViewer(index) {
+
+
+    const photo =
+        photos[index];
+
 
     document.getElementById(
         "viewerImage"
-    ).src = imagePath;
+    ).src =
+        "Photos/" +
+        photo.file;
+
+
+    document.getElementById(
+        "viewerTitle"
+    ).textContent =
+        photo.title;
 
 
     document.getElementById(
         "viewer"
-    ).classList.add("active");
+    ).classList.add(
+        "active"
+    );
 
 
     document.body.style.overflow =
         "hidden";
 
 }
+
 
 
 function closeViewer() {
 
+
     document.getElementById(
         "viewer"
-    ).classList.remove("active");
+    ).classList.remove(
+        "active"
+    );
 
 
     document.body.style.overflow =
@@ -1649,38 +2074,91 @@ function closeViewer() {
 }
 
 
+
 /* =====================================================
-   DOWNLOAD REQUEST
+   DOWNLOAD
 ===================================================== */
 
-let downloadPhoto = 1;
+let selectedPhoto =
+    null;
 
 
-function requestDownload(number) {
-
-    downloadPhoto = number;
+function requestDownload(index) {
 
 
-    document.getElementById(
-        "loginOverlay"
-    ).classList.add("active");
+    selectedPhoto =
+        index;
 
 
-    document.body.style.overflow =
-        "hidden";
+    openLogin();
 
 }
 
 
+function downloadPhoto() {
+
+
+    if (
+        selectedPhoto === null
+    ) {
+
+        return;
+
+    }
+
+
+    const photo =
+        photos[selectedPhoto];
+
+
+    const link =
+        document.createElement(
+            "a"
+        );
+
+
+    link.href =
+        "Photos/" +
+        photo.file;
+
+
+    link.download =
+        photo.title +
+        ".jpeg";
+
+
+    document.body.appendChild(
+        link
+    );
+
+
+    link.click();
+
+
+    document.body.removeChild(
+        link
+    );
+
+
+    selectedPhoto =
+        null;
+
+}
+
+
+
 /* =====================================================
-   LOGIN POPUP
+   LOGIN
 ===================================================== */
 
 function openLogin() {
 
+
     document.getElementById(
-        "loginOverlay"
-    ).classList.add("active");
+        "loginModal"
+    ).classList.add(
+        "active"
+    );
 
 
     document.body.style.overflow =
@@ -1689,17 +2167,22 @@ function openLogin() {
 }
 
 
+
 function closeLogin() {
 
+
     document.getElementById(
-        "loginOverlay"
-    ).classList.remove("active");
+        "loginModal"
+    ).classList.remove(
+        "active"
+    );
 
 
     document.body.style.overflow =
         "auto";
 
 }
+
 
 
 /* =====================================================
@@ -1708,69 +2191,65 @@ function closeLogin() {
 
 function demoLogin(provider) {
 
-    document.getElementById(
-        "loginOverlay"
-    ).classList.remove("active");
+
+    const message =
+        document.getElementById(
+            "demoMessage"
+        );
 
 
-    document.body.style.overflow =
-        "auto";
+    message.innerHTML =
 
+        "DEMO LOGIN SUCCESSFUL.<br><br>" +
 
-    /*
-       Demo authentication.
+        "You selected: " +
+        provider +
+        "<br><br>" +
 
-       After a real authentication
-       system is connected, this function
-       should only download after the
-       authentication has been verified.
-    */
+        "Your photograph will now download.";
 
 
     setTimeout(
         function() {
 
-            downloadPhotoFile(
-                downloadPhoto
-            );
+
+            closeLogin();
+
+
+            downloadPhoto();
+
 
         },
-        300
+        1000
     );
 
 }
 
 
+
 /* =====================================================
-   DOWNLOAD PHOTO
+   DEMO SIGN UP
 ===================================================== */
 
-function downloadPhotoFile(number) {
-
-    const link =
-        document.createElement("a");
+function demoSignup() {
 
 
-    link.href =
-        "Photos/" +
-        number +
-        ".jpeg";
+    const message =
+        document.getElementById(
+            "demoMessage"
+        );
 
 
-    link.download =
-        photoNames[number - 1] +
-        ".jpeg";
+    message.innerHTML =
 
+        "DEMO SIGN UP<br><br>" +
 
-    document.body.appendChild(link);
-
-
-    link.click();
-
-
-    document.body.removeChild(link);
+        "The final VEYLORA version " +
+        "will contain the real account " +
+        "registration system.";
 
 }
+
 
 
 /* =====================================================
@@ -1781,11 +2260,14 @@ document.addEventListener(
     "keydown",
     function(event) {
 
+
         if (
             event.key === "Escape"
         ) {
 
+
             closeViewer();
+
 
             closeLogin();
 
@@ -1795,13 +2277,15 @@ document.addEventListener(
 );
 
 
+
 /* =====================================================
-   PREVENT IMAGE DRAGGING
+   IMAGE PROTECTION FOR DEMO
 ===================================================== */
 
 document.addEventListener(
     "dragstart",
     function(event) {
+
 
         if (
             event.target.tagName ===
@@ -1816,13 +2300,10 @@ document.addEventListener(
 );
 
 
-/* =====================================================
-   PREVENT RIGHT CLICK ON IMAGES
-===================================================== */
-
 document.addEventListener(
     "contextmenu",
     function(event) {
+
 
         if (
             event.target.tagName ===
