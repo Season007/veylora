@@ -14,7 +14,7 @@
 <style>
 
 /* =====================================================
-   GLOBAL
+   RESET & GLOBAL
 ===================================================== */
 
 * {
@@ -43,60 +43,61 @@ body {
     position: fixed;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 82px;
+
     padding: 0 5%;
+
     display: flex;
     align-items: center;
     justify-content: space-between;
+
     z-index: 1000;
-    background: rgba(5,5,5,0.93);
+
+    background: rgba(5, 5, 5, 0.94);
+
     backdrop-filter: blur(12px);
+
     border-bottom: 1px solid #202020;
 }
 
 .logo {
     color: #ffffff;
+
     text-decoration: none;
+
     font-size: 25px;
+
     font-weight: 600;
+
     letter-spacing: 8px;
 }
 
 .nav-links {
     display: flex;
+
     align-items: center;
+
     gap: 35px;
 }
 
 .nav-links a {
-    color: #bcbcbc;
+    color: #aaa;
+
     text-decoration: none;
+
     font-size: 11px;
+
     letter-spacing: 2px;
+
     text-transform: uppercase;
+
     transition: 0.3s;
 }
 
 .nav-links a:hover {
     color: white;
-}
-
-.account-btn {
-    padding: 11px 18px;
-    background: transparent;
-    color: white;
-    border: 1px solid #555;
-    font-size: 10px;
-    letter-spacing: 1.5px;
-    cursor: pointer;
-    transition: 0.3s;
-}
-
-.account-btn:hover {
-    background: white;
-    color: black;
-    border-color: white;
 }
 
 
@@ -106,21 +107,29 @@ body {
 
 .hero {
     height: 100vh;
+
     min-height: 650px;
+
     position: relative;
+
     display: flex;
+
     align-items: flex-end;
+
     padding: 0 7% 100px;
 
     background-image:
+
         linear-gradient(
             to bottom,
             rgba(0,0,0,0.05),
-            rgba(0,0,0,0.9)
+            rgba(0,0,0,0.92)
         ),
+
         url("Photos/1.jpeg");
 
     background-size: cover;
+
     background-position: center;
 }
 
@@ -130,41 +139,63 @@ body {
 
 .hero-small {
     font-size: 11px;
+
     letter-spacing: 5px;
+
     text-transform: uppercase;
-    color: #cfcfcf;
+
+    color: #ccc;
+
     margin-bottom: 20px;
 }
 
 .hero h1 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(65px, 11vw, 150px);
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(65px, 11vw, 150px);
+
     font-weight: 400;
+
     letter-spacing: 12px;
+
     line-height: 0.9;
+
     margin-bottom: 30px;
 }
 
 .hero-description {
-    max-width: 520px;
-    color: #cccccc;
+    max-width: 540px;
+
+    color: #ccc;
+
     font-size: 15px;
+
     line-height: 1.8;
 }
 
 .scroll-indicator {
     position: absolute;
+
     right: 7%;
+
     bottom: 50px;
-    font-size: 10px;
-    letter-spacing: 3px;
+
     color: #aaa;
+
+    font-size: 10px;
+
+    letter-spacing: 3px;
+
     writing-mode: vertical-rl;
 }
 
 
 /* =====================================================
-   COLLECTION
+   COLLECTION HEADER
 ===================================================== */
 
 .collection {
@@ -173,29 +204,45 @@ body {
 
 .section-header {
     display: flex;
+
     justify-content: space-between;
+
     align-items: flex-end;
-    margin-bottom: 70px;
+
+    margin-bottom: 75px;
 }
 
 .section-number {
     font-size: 11px;
+
     letter-spacing: 4px;
+
     color: #777;
+
     margin-bottom: 15px;
 }
 
 .section-title {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(42px, 6vw, 80px);
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(42px, 6vw, 80px);
+
     font-weight: 400;
+
     line-height: 1;
 }
 
 .section-description {
-    max-width: 330px;
+    max-width: 350px;
+
     color: #777;
+
     font-size: 13px;
+
     line-height: 1.8;
 }
 
@@ -206,14 +253,21 @@ body {
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(12, 1fr);
-    gap: 50px 25px;
+
+    grid-template-columns:
+        repeat(12, 1fr);
+
+    gap: 65px 25px;
 }
 
 .photo-card {
     position: relative;
+
     overflow: hidden;
 }
+
+
+/* Gallery layout */
 
 .photo-card:nth-child(1) {
     grid-column: span 7;
@@ -284,37 +338,62 @@ body {
 
 
 /* =====================================================
-   IMAGES
+   IMAGE
 ===================================================== */
 
 .image-container {
     position: relative;
+
     overflow: hidden;
+
     background: #111;
 }
 
 .image-container img {
     display: block;
+
     width: 100%;
+
     height: 520px;
+
     object-fit: cover;
+
     filter: grayscale(100%);
-    transition: transform 0.8s ease, filter 0.8s ease;
+
     cursor: pointer;
+
     user-select: none;
+
     -webkit-user-drag: none;
+
+    transition:
+        transform 0.8s ease,
+        filter 0.8s ease;
 }
 
-.photo-card:nth-child(2) .image-container img,
-.photo-card:nth-child(3) .image-container img,
-.photo-card:nth-child(7) .image-container img,
-.photo-card:nth-child(8) .image-container img,
-.photo-card:nth-child(9) .image-container img {
+.photo-card:nth-child(2)
+.image-container img,
+
+.photo-card:nth-child(3)
+.image-container img,
+
+.photo-card:nth-child(7)
+.image-container img,
+
+.photo-card:nth-child(8)
+.image-container img,
+
+.photo-card:nth-child(9)
+.image-container img {
+
     height: 430px;
 }
 
-.photo-card:hover .image-container img {
+.photo-card:hover
+.image-container img {
+
     transform: scale(1.04);
+
     filter: grayscale(0%);
 }
 
@@ -325,30 +404,49 @@ body {
 
 .image-overlay {
     position: absolute;
+
     inset: 0;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     background: rgba(0,0,0,0.25);
+
     opacity: 0;
+
     transition: 0.4s;
+
     pointer-events: none;
 }
 
-.photo-card:hover .image-overlay {
+.photo-card:hover
+.image-overlay {
     opacity: 1;
 }
 
 .view-circle {
+
     width: 70px;
+
     height: 70px;
+
     border: 1px solid white;
+
     border-radius: 50%;
+
     display: flex;
+
     align-items: center;
+
     justify-content: center;
+
     color: white;
+
     font-size: 10px;
+
     letter-spacing: 1px;
 }
 
@@ -358,137 +456,158 @@ body {
 ===================================================== */
 
 .photo-info {
+
+    padding-top: 20px;
+}
+
+.photo-top {
+
     display: flex;
-    justify-content: space-between;
-    align-items: center;
+
+    align-items: flex-start;
+
     gap: 20px;
-    padding: 18px 0 0;
 }
 
 .photo-number {
+
     color: #555;
+
     font-size: 11px;
+
     letter-spacing: 2px;
+
+    padding-top: 4px;
 }
 
 .photo-title {
+
     flex: 1;
 }
 
 .photo-title h3 {
-    font-family: Georgia, "Times New Roman", serif;
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
     font-weight: 400;
-    font-size: 19px;
+
+    font-size: 21px;
+
     line-height: 1.3;
 }
 
 .photo-title p {
+
     color: #666;
+
     font-size: 10px;
+
     letter-spacing: 1px;
+
     text-transform: uppercase;
+
     margin-top: 7px;
 }
 
 
 /* =====================================================
-   PHOTO BUTTONS
+   BUTTONS
 ===================================================== */
 
 .photo-actions {
+
     display: flex;
-    align-items: center;
-    gap: 8px;
+
+    gap: 10px;
+
+    margin-top: 18px;
+
+    padding-left: 31px;
 }
 
-.view-full-btn,
-.download-btn {
-    padding: 10px 13px;
+.photo-actions button {
+
+    padding: 11px 15px;
+
     background: transparent;
+
     color: #aaa;
-    border: 1px solid #444;
+
+    border: 1px solid #3b3b3b;
+
     cursor: pointer;
+
     font-size: 9px;
-    letter-spacing: 1.2px;
+
+    letter-spacing: 1.4px;
+
     transition: 0.3s;
-    white-space: nowrap;
 }
 
-.view-full-btn:hover,
-.download-btn:hover {
+.photo-actions button:hover {
+
     background: white;
+
     color: black;
+
     border-color: white;
 }
 
 
 /* =====================================================
-   ABOUT
+   STORY
 ===================================================== */
 
-.about {
-    padding: 160px 10%;
-    border-top: 1px solid #1c1c1c;
-    border-bottom: 1px solid #1c1c1c;
+.story {
 
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 100px;
+    display: none;
+
+    margin-top: 25px;
+
+    margin-left: 31px;
+
+    padding: 30px;
+
+    border-left: 1px solid #333;
+
+    background: #090909;
 }
 
-.about-label {
-    font-size: 10px;
-    letter-spacing: 4px;
-    color: #666;
-    text-transform: uppercase;
-    margin-bottom: 20px;
+.story.active {
+
+    display: block;
 }
 
-.about h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: clamp(45px, 6vw, 80px);
-    font-weight: 400;
-    line-height: 1;
-}
+.story-heading {
 
-.about-text {
-    color: #999;
-    font-size: 15px;
-    line-height: 2;
-    max-width: 500px;
-}
-
-
-/* =====================================================
-   CREATOR
-===================================================== */
-
-.creator {
-    margin-top: 45px;
-    padding-top: 30px;
-    border-top: 1px solid #292929;
-}
-
-.creator-small {
-    color: #666;
-    font-size: 10px;
-    letter-spacing: 4px;
-    text-transform: uppercase;
-    margin-bottom: 12px;
-}
-
-.creator-name {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 30px;
-    font-weight: 400;
-}
-
-.creator-title {
-    margin-top: 6px;
     color: #888;
-    font-size: 11px;
+
+    font-size: 9px;
+
     letter-spacing: 3px;
+
     text-transform: uppercase;
+
+    margin-bottom: 8px;
+
+    margin-top: 20px;
+}
+
+.story-heading:first-child {
+
+    margin-top: 0;
+}
+
+.story p {
+
+    color: #aaa;
+
+    font-size: 13px;
+
+    line-height: 1.9;
 }
 
 
@@ -497,64 +616,78 @@ body {
 ===================================================== */
 
 .viewer {
-    position: fixed;
-    inset: 0;
-    z-index: 5000;
 
-    background: rgba(0,0,0,0.98);
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 5000;
 
     display: none;
 
     align-items: center;
+
     justify-content: center;
 
     padding: 30px;
+
+    background: rgba(0,0,0,0.98);
 }
 
 .viewer.active {
+
     display: flex;
 }
 
 .viewer img {
+
     max-width: 94vw;
+
     max-height: 90vh;
 
     width: auto;
+
     height: auto;
 
     object-fit: contain;
 
     user-select: none;
+
     -webkit-user-drag: none;
 }
 
 .viewer-close {
+
     position: absolute;
 
-    top: 20px;
+    top: 18px;
+
     right: 30px;
 
     background: none;
+
     border: none;
 
     color: white;
 
-    font-size: 42px;
+    font-size: 44px;
+
     font-weight: 200;
 
     cursor: pointer;
-
-    z-index: 10;
 }
 
 .viewer-close:hover {
-    color: #aaa;
+
+    color: #999;
 }
 
 .viewer-title {
+
     position: absolute;
 
     left: 30px;
+
     bottom: 25px;
 
     color: #aaa;
@@ -566,144 +699,114 @@ body {
 
 
 /* =====================================================
-   LOGIN MODAL
+   ABOUT
 ===================================================== */
 
-.modal-overlay {
-    position: fixed;
-    inset: 0;
+.about {
 
-    z-index: 6000;
+    padding: 160px 10%;
 
-    background: rgba(0,0,0,0.86);
+    border-top: 1px solid #1c1c1c;
 
-    backdrop-filter: blur(10px);
+    border-bottom: 1px solid #1c1c1c;
 
-    display: none;
+    display: grid;
 
-    align-items: center;
-    justify-content: center;
+    grid-template-columns:
+        1fr 1fr;
 
-    padding: 20px;
+    gap: 100px;
 }
 
-.modal-overlay.active {
-    display: flex;
-}
+.about-label {
 
-.modal {
-    width: 100%;
-    max-width: 430px;
-
-    background: #0c0c0c;
-
-    border: 1px solid #333;
-
-    padding: 45px;
-
-    position: relative;
-}
-
-.modal-close {
-    position: absolute;
-
-    top: 15px;
-    right: 20px;
-
-    background: none;
-    border: none;
-
-    color: #777;
-
-    font-size: 25px;
-
-    cursor: pointer;
-}
-
-.modal-close:hover {
-    color: white;
-}
-
-.modal-label {
-    font-size: 9px;
-    letter-spacing: 4px;
     color: #666;
-    text-transform: uppercase;
-    margin-bottom: 15px;
-}
-
-.modal h2 {
-    font-family: Georgia, "Times New Roman", serif;
-    font-size: 35px;
-    font-weight: 400;
-    margin-bottom: 10px;
-}
-
-.modal p {
-    color: #777;
-    font-size: 13px;
-    line-height: 1.7;
-    margin-bottom: 30px;
-}
-
-.demo-provider {
-    width: 100%;
-
-    padding: 14px;
-
-    margin-bottom: 10px;
-
-    background: #111;
-
-    color: #ddd;
-
-    border: 1px solid #333;
-
-    cursor: pointer;
-
-    font-size: 11px;
-
-    letter-spacing: 1px;
-
-    transition: 0.3s;
-}
-
-.demo-provider:hover {
-    background: white;
-    color: black;
-    border-color: white;
-}
-
-.modal-signup {
-    text-align: center;
-
-    margin-top: 20px;
-
-    color: #555;
-
-    font-size: 11px;
-}
-
-.modal-signup a {
-    color: white;
-
-    cursor: pointer;
-
-    text-decoration: underline;
-}
-
-.demo-message {
-    margin-top: 20px;
-
-    padding: 12px;
-
-    border: 1px solid #333;
-
-    color: #888;
 
     font-size: 10px;
 
-    line-height: 1.6;
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 20px;
+}
+
+.about h2 {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size:
+        clamp(45px, 6vw, 80px);
+
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+.about-text {
+
+    max-width: 520px;
+
+    color: #999;
+
+    font-size: 15px;
+
+    line-height: 2;
+}
+
+
+/* =====================================================
+   CREATOR
+===================================================== */
+
+.creator {
+
+    margin-top: 45px;
+
+    padding-top: 30px;
+
+    border-top: 1px solid #292929;
+}
+
+.creator-small {
+
+    color: #666;
+
+    font-size: 10px;
+
+    letter-spacing: 4px;
+
+    text-transform: uppercase;
+
+    margin-bottom: 12px;
+}
+
+.creator-name {
+
+    font-family:
+        Georgia,
+        "Times New Roman",
+        serif;
+
+    font-size: 30px;
+
+    font-weight: 400;
+}
+
+.creator-title {
+
+    color: #888;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+    text-transform: uppercase;
+
+    margin-top: 6px;
 }
 
 
@@ -712,6 +815,7 @@ body {
 ===================================================== */
 
 footer {
+
     padding: 30px 6%;
 
     border-top: 1px solid #1c1c1c;
@@ -734,21 +838,6 @@ footer {
    RESPONSIVE
 ===================================================== */
 
-@media (max-width: 1000px) {
-
-    .photo-actions {
-        flex-direction: column;
-        align-items: stretch;
-    }
-
-    .view-full-btn,
-    .download-btn {
-        width: 100%;
-    }
-
-}
-
-
 @media (max-width: 900px) {
 
     .nav-links {
@@ -756,25 +845,34 @@ footer {
     }
 
     .gallery {
-        grid-template-columns: 1fr 1fr;
-        gap: 35px 15px;
+
+        grid-template-columns:
+            1fr 1fr;
     }
 
     .photo-card,
     .photo-card:nth-child(n) {
+
         grid-column: span 1;
+
         margin-top: 0;
     }
 
     .image-container img,
-    .photo-card:nth-child(n) .image-container img {
+    .photo-card:nth-child(n)
+    .image-container img {
+
         height: 400px;
     }
 
     .about {
+
         grid-template-columns: 1fr;
+
         gap: 50px;
-        padding: 100px 7%;
+
+        padding:
+            100px 7%;
     }
 }
 
@@ -782,101 +880,122 @@ footer {
 @media (max-width: 600px) {
 
     .navbar {
+
         height: 70px;
     }
 
     .logo {
+
         font-size: 19px;
+
         letter-spacing: 5px;
     }
 
-    .account-btn {
-        padding: 8px 10px;
-        font-size: 9px;
-    }
-
     .hero {
+
         min-height: 600px;
     }
 
     .hero h1 {
+
         letter-spacing: 7px;
     }
 
     .scroll-indicator {
+
         display: none;
     }
 
     .collection {
+
         padding: 100px 6%;
     }
 
     .section-header {
+
         display: block;
     }
 
     .section-description {
+
         margin-top: 25px;
     }
 
     .gallery {
+
         grid-template-columns: 1fr;
     }
 
     .photo-card,
     .photo-card:nth-child(n) {
+
         grid-column: span 1;
     }
 
     .image-container img,
-    .photo-card:nth-child(n) .image-container img {
+    .photo-card:nth-child(n)
+    .image-container img {
+
         height: 430px;
     }
 
-    .photo-info {
-        display: block;
-    }
-
-    .photo-number {
-        margin-bottom: 10px;
-    }
-
     .photo-actions {
-        margin-top: 15px;
-        flex-direction: row;
+
+        padding-left: 0;
+
+        flex-wrap: wrap;
     }
 
-    .view-full-btn,
-    .download-btn {
+    .photo-actions button {
+
         flex: 1;
     }
 
+    .story {
+
+        margin-left: 0;
+
+        padding: 22px;
+    }
+
+    .about {
+
+        padding:
+            90px 7%;
+    }
+
     .creator-name {
+
         font-size: 25px;
     }
 
     footer {
+
         display: block;
+
         text-align: center;
+
         line-height: 2;
     }
 
-    .modal {
-        padding: 35px 25px;
-    }
-
     .viewer {
+
         padding: 15px;
     }
 
     .viewer img {
+
         max-width: 96vw;
+
         max-height: 85vh;
     }
 
     .viewer-title {
+
         left: 15px;
+
         bottom: 15px;
+
         max-width: 70%;
     }
 }
@@ -915,14 +1034,6 @@ footer {
 
     </div>
 
-    <button
-        class="account-btn"
-        onclick="openLogin()">
-
-        SIGN IN
-
-    </button>
-
 </nav>
 
 
@@ -946,8 +1057,8 @@ footer {
         <p class="hero-description">
 
             A collection of photographs
-            capturing places, landscapes,
-            wildlife, architecture and
+            capturing wildlife, landscapes,
+            architecture, cities and
             unforgettable moments.
 
         </p>
@@ -955,7 +1066,9 @@ footer {
     </div>
 
     <div class="scroll-indicator">
+
         SCROLL TO EXPLORE
+
     </div>
 
 </section>
@@ -966,36 +1079,47 @@ footer {
      COLLECTION
 ===================================================== -->
 
-<section class="collection" id="collection">
+<section
+    class="collection"
+    id="collection">
 
     <div class="section-header">
 
         <div>
 
             <div class="section-number">
+
                 01 / COLLECTION
+
             </div>
 
             <h2 class="section-title">
+
                 Selected<br>
                 Works
+
             </h2>
 
         </div>
 
+
         <p class="section-description">
 
             Fifteen original photographs
-            documenting landscapes,
-            architecture, wildlife and
-            unforgettable moments.
+            documenting wildlife, landscapes,
+            architecture, urban life and
+            personal moments.
 
         </p>
 
     </div>
 
 
-    <div class="gallery" id="gallery"></div>
+    <div
+        class="gallery"
+        id="gallery">
+
+    </div>
 
 </section>
 
@@ -1005,17 +1129,23 @@ footer {
      ABOUT
 ===================================================== -->
 
-<section class="about" id="about">
+<section
+    class="about"
+    id="about">
 
     <div>
 
         <div class="about-label">
+
             02 / ABOUT VEYLORA
+
         </div>
 
         <h2>
+
             Photography<br>
             Without Limits.
+
         </h2>
 
     </div>
@@ -1032,16 +1162,16 @@ footer {
 
             <br><br>
 
-            From the streets of China to
-            the mountains of the Himalayas,
-            every photograph tells a small
-            story.
+            From the streets and architecture
+            of China to the mountains and
+            forests of the Himalayas, every
+            photograph tells a story.
 
             <br><br>
 
-            This collection is presented
-            as a visual archive of places,
-            experiences and memories.
+            This collection is a visual archive
+            of places, experiences, wildlife
+            and memories.
 
         </p>
 
@@ -1049,15 +1179,21 @@ footer {
         <div class="creator">
 
             <div class="creator-small">
+
                 Photographed &amp; Preserved By
+
             </div>
 
             <div class="creator-name">
+
                 Season Raj Gautam
+
             </div>
 
             <div class="creator-title">
+
                 CEO, VEYLORA
+
             </div>
 
         </div>
@@ -1103,113 +1239,18 @@ footer {
 
     </button>
 
+
     <img
         id="viewerImage"
         src=""
         alt="VEYLORA Photograph"
-        onclick="event.stopPropagation()"
-        draggable="false">
+        draggable="false"
+        onclick="event.stopPropagation()">
+
 
     <div
         class="viewer-title"
         id="viewerTitle">
-    </div>
-
-</div>
-
-
-
-<!-- =====================================================
-     DEMO LOGIN
-===================================================== -->
-
-<div
-    class="modal-overlay"
-    id="loginModal">
-
-    <div class="modal">
-
-        <button
-            class="modal-close"
-            onclick="closeLogin()">
-
-            ×
-
-        </button>
-
-        <div class="modal-label">
-            VEYLORA ACCOUNT
-        </div>
-
-        <h2>
-            Welcome.
-        </h2>
-
-        <p>
-
-            Sign in to your VEYLORA
-            account before downloading
-            photographs.
-
-        </p>
-
-
-        <button
-            class="demo-provider"
-            onclick="demoLogin('Google')">
-
-            CONTINUE WITH GOOGLE
-
-        </button>
-
-
-        <button
-            class="demo-provider"
-            onclick="demoLogin('Apple')">
-
-            CONTINUE WITH APPLE
-
-        </button>
-
-
-        <button
-            class="demo-provider"
-            onclick="demoLogin('Facebook')">
-
-            CONTINUE WITH FACEBOOK
-
-        </button>
-
-
-        <button
-            class="demo-provider"
-            onclick="demoLogin('X / TWITTER')">
-
-            CONTINUE WITH X / TWITTER
-
-        </button>
-
-
-        <div class="modal-signup">
-
-            Don't have an account?
-
-            <a onclick="demoSignup()">
-                CREATE ACCOUNT
-            </a>
-
-        </div>
-
-
-        <div
-            class="demo-message"
-            id="demoMessage">
-
-            DEMO MODE — Authentication is
-            simulated for this local preview.
-            No real account is created.
-
-        </div>
 
     </div>
 
@@ -1220,95 +1261,532 @@ footer {
 <script>
 
 /* =====================================================
-   PHOTO DATA
+   PHOTO INFORMATION
 ===================================================== */
 
 const photos = [
 
     {
         file: "1.jpeg",
-        title: "Pandas in Chengdu"
+
+        title:
+            "Giant Panda Enclosure Showcase",
+
+        sections: [
+
+            {
+                heading:
+                    "A Peaceful Moment",
+
+                text:
+                    "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."
+            },
+
+            {
+                heading:
+                    "Immersive Natural Habitat",
+
+                text:
+                    "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."
+            },
+
+            {
+                heading:
+                    "Golden Hour Ambience",
+
+                text:
+                    "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."
+            }
+
+        ]
     },
+
 
     {
         file: "2.jpeg",
-        title: "Pandas in Chengdu"
+
+        title:
+            "Giant Panda Enclosure Showcase",
+
+        sections: [
+
+            {
+                heading:
+                    "A Peaceful Moment",
+
+                text:
+                    "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."
+            },
+
+            {
+                heading:
+                    "Immersive Natural Habitat",
+
+                text:
+                    "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."
+            },
+
+            {
+                heading:
+                    "Golden Hour Ambience",
+
+                text:
+                    "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."
+            }
+
+        ]
     },
+
 
     {
         file: "3.jpeg",
-        title: "Pandas in Chengdu"
+
+        title:
+            "Giant Panda Enclosure Showcase",
+
+        sections: [
+
+            {
+                heading:
+                    "A Peaceful Moment",
+
+                text:
+                    "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."
+            },
+
+            {
+                heading:
+                    "Immersive Natural Habitat",
+
+                text:
+                    "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."
+            },
+
+            {
+                heading:
+                    "Golden Hour Ambience",
+
+                text:
+                    "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."
+            }
+
+        ]
     },
+
 
     {
         file: "4.jpeg",
-        title: "Shanghai Pearl Tower"
+
+        title:
+            "Shanghai Lujiazui Skyline at Night",
+
+        sections: [
+
+            {
+                heading:
+                    "Iconic Architectural Landmarks",
+
+                text:
+                    "This striking night view showcases the skyline of Shanghai’s Lujiazui financial district as seen across the Huangpu River. Dominating the center-left is the famous Oriental Pearl TV Tower glowing in vivid pink and purple, while the towering Shanghai Tower and the trapezoidal Shanghai World Financial Center illuminate the skyline to the right."
+            },
+
+            {
+                heading:
+                    "Vibrant City Lights",
+
+                text:
+                    "The surrounding skyscrapers are fully illuminated with a mix of colorful LED displays, neon facades, and architectural lighting. The rich palette of deep reds, bright purples, and warm golds creates a dramatic, futuristic contrast against the dark night sky."
+            },
+
+            {
+                heading:
+                    "Dazzling River Reflections",
+
+                text:
+                    "In the foreground, the dark, rippling waters of the Huangpu River reflect the brilliant city lights from above. The water creates a shimmering tapestry of red and purple light, adding depth and energy to the panoramic urban landscape."
+            }
+
+        ]
     },
+
 
     {
         file: "5.jpeg",
+
         title:
-        "Frozen Lake in Forbidden Kingdom, Beijing"
+            "Frozen Moat at the Forbidden City, Beijing",
+
+        sections: [
+
+            {
+                heading:
+                    "A Winter Contrast in Imperial History",
+
+                text:
+                    "This serene view captures the iconic moat encircling the Forbidden City in Beijing during the winter months. A striking visual boundary splits the canal: one side is capped with a thick layer of frosted white ice, while the open water beside it reflects the brilliant blue sky and surrounding historical structures."
+            },
+
+            {
+                heading:
+                    "Historic Architecture and Natural Splendor",
+
+                text:
+                    "Along the right bank stands a classic imperial red wall topped with traditional grey tiles, anchoring the photo in rich Chinese architectural heritage. Bare winter trees line the left embankment, framing the long stretch of the canal and adding a tranquil, seasonal atmosphere to the historic precinct."
+            },
+
+            {
+                heading:
+                    "Crisp Atmosphere and Mirror Reflections",
+
+                text:
+                    "Under a clear, sunny sky, the still water mirrors the intense blue overhead and the dark outlines of the surrounding trees and buildings. Ducks swimming in the open water add subtle life to this quiet, crisp winter landscape."
+            }
+
+        ]
     },
+
 
     {
         file: "6.jpeg",
+
         title:
-        "View of the World's Tallest Mountain — KTM to Chengdu Flight"
+            "Himalayan Panorama from the Flight Path",
+
+        sections: [
+
+            {
+                heading:
+                    "Majestic Snow-Capped Peaks",
+
+                text:
+                    "Framed by the wing of a Sichuan Airlines aircraft, the snow-covered peaks of the Himalayas form a continuous, gleaming horizon above the clouds. Rising dramatically against the deep blue sky, these formidable summits—including Mount Everest—showcase the breathtaking grandeur of the world’s highest mountain range."
+            },
+
+            {
+                heading:
+                    "Layered Aerial Perspective",
+
+                text:
+                    "Below the towering snow peaks, sprawling green hills, valleys, and subtle cloud layers stretch across the landscape. The dramatic elevation drop highlights the immense scale of the terrain, offering a rare bird’s-eye view of the geographical transition between Nepal and the Tibetan Plateau."
+            },
+
+            {
+                heading:
+                    "Clear Sky Above the Clouds",
+
+                text:
+                    "Cruising at high altitude, the aircraft glides through crisp, clear skies, providing uninterrupted views of the natural wonder below. The vibrant red winglet adds a sharp pop of color, contrasting beautifully with the deep azure sky and the tranquil tones of the earth beneath."
+            }
+
+        ]
     },
+
 
     {
         file: "7.jpeg",
+
         title:
-        "Cold Water Stream Flowing from the Himalayas"
+            "Cold Water Stream in the Annapurna Range",
+
+        sections: [
+
+            {
+                heading:
+                    "Pristine Mountain Flow",
+
+                text:
+                    "Originating from the high Himalayan peaks of the Annapurna range, a clear, crisp stream trickles through mossy rocks into a quiet forest pool. The crystal-clear water cascades gently over natural rock formations, bubbling with fresh mountain run-off in a serene display of nature."
+            },
+
+            {
+                heading:
+                    "Lush Himalayan Canopy",
+
+                text:
+                    "Enclosed by a dense, vibrant green jungle, the surrounding landscape thrives with wild ferns, overgrown foliage, and tall trees. The deep greenery frames the stream path, accentuating the hidden, untouched feel of this tropical mountain forest."
+            },
+
+            {
+                heading:
+                    "Earthy Natural Textures",
+
+                text:
+                    "Large, moss-covered boulders sit alongside reddish-brown rocks and soil, adding rich color and texture to the scene. Soft sunlight filters through the overhead canopy, highlighting the glint of sunlight on the water’s surface and bringing out the natural beauty of the Himalayan ecosystem."
+            }
+
+        ]
     },
+
 
     {
         file: "8.jpeg",
+
         title:
-        "Cold Water Stream Flowing from the Himalayas"
+            "Cold Water Stream in the Annapurna Range",
+
+        sections: [
+
+            {
+                heading:
+                    "Pristine Mountain Flow",
+
+                text:
+                    "Originating from the high Himalayan peaks of the Annapurna range, a clear, crisp stream trickles through mossy rocks into a quiet forest pool. The crystal-clear water cascades gently over natural rock formations, bubbling with fresh mountain run-off in a serene display of nature."
+            },
+
+            {
+                heading:
+                    "Lush Himalayan Canopy",
+
+                text:
+                    "Enclosed by a dense, vibrant green jungle, the surrounding landscape thrives with wild ferns, overgrown foliage, and tall trees. The deep greenery frames the stream path, accentuating the hidden, untouched feel of this tropical mountain forest."
+            },
+
+            {
+                heading:
+                    "Earthy Natural Textures",
+
+                text:
+                    "Large, moss-covered boulders sit alongside reddish-brown rocks and soil, adding rich color and texture to the scene. Soft sunlight filters through the overhead canopy, highlighting the glint of sunlight on the water’s surface and bringing out the natural beauty of the Himalayan ecosystem."
+            }
+
+        ]
     },
+
 
     {
         file: "9.jpeg",
+
         title:
-        "A Hut in the Middle of the Jungle"
+            "Tranquil Forest Clearing and Shelter",
+
+        sections: [
+
+            {
+                heading:
+                    "A Peaceful Woodland Pavilion",
+
+                text:
+                    "Nestled deep within a dense, lush forest, a small, open-sided stone shelter with a dark sloped roof sits quietly in the background. Surrounded by towering trees, the structure offers a serene spot for rest and shelter along a secluded trail."
+            },
+
+            {
+                heading:
+                    "Vibrant Canopy and Fallen Leaves",
+
+                text:
+                    "The ground in the foreground is completely carpeted with dry, fallen brown leaves, creating a warm contrast against the cool greens of the forest. Above, a thick canopy of tall trees stretches across the frame, filtering the natural light and casting soft shadows throughout the woods."
+            },
+
+            {
+                heading:
+                    "Secluded and Natural Atmosphere",
+
+                text:
+                    "A subtle dirt path weaves past the pavilion and towards a stone feature on the right, leading deeper into the quiet woodland. The rich green foliage and undisturbed surrounding environment evoke a calm, peaceful escape into nature."
+            }
+
+        ]
     },
+
 
     {
         file: "10.jpeg",
+
         title:
-        "Night Life in China"
+            "Moody Night in Urban China",
+
+        sections: [
+
+            {
+                heading:
+                    "Neon Vibrancy on Wet Streets",
+
+                text:
+                    "Captured on a rainy night in Chengdu’s commercial district near Chunxi Road, this scene showcases the vivid neon glow of city life reflecting off damp pavement. Bright signboards in fiery reds, cyans, and warm yellows pierce the darkness, casting long, colorful reflections across the slick ground after a fresh downpour."
+            },
+
+            {
+                heading:
+                    "Interplay of Modernity and Construction",
+
+                text:
+                    "The composition balances classic urban architecture with continuous development. Anchored by a prominent clock tower building, the skyline features an illuminated construction crane glowing bright yellow in the background—a symbolic nod to the rapid pace of urban expansion and nightlife development in modern Chinese cities."
+            },
+
+            {
+                heading:
+                    "Quiet, Atmospheric Night Scene",
+
+                text:
+                    "Unlike the typical bustling crowds of daytime shopping streets, this moody late-night shot captures a calm, reflective ambiance. Distant silhouettes of pedestrians, subtle atmospheric haze, and intricate surface patterns on the wet ground give the scene a cinematic, cyberpunk-inspired aesthetic."
+            }
+
+        ]
     },
+
 
     {
         file: "11.jpeg",
+
         title:
-        "Night Life in China"
+            "Moody Night in Urban China",
+
+        sections: [
+
+            {
+                heading:
+                    "Neon Vibrancy on Wet Streets",
+
+                text:
+                    "Captured on a rainy night in Chengdu’s commercial district near Chunxi Road, this scene showcases the vivid neon glow of city life reflecting off damp pavement. Bright signboards in fiery reds, cyans, and warm yellows pierce the darkness, casting long, colorful reflections across the slick ground after a fresh downpour."
+            },
+
+            {
+                heading:
+                    "Interplay of Modernity and Construction",
+
+                text:
+                    "The composition balances classic urban architecture with continuous development. Anchored by a prominent clock tower building, the skyline features an illuminated construction crane glowing bright yellow in the background—a symbolic nod to the rapid pace of urban expansion and nightlife development in modern Chinese cities."
+            },
+
+            {
+                heading:
+                    "Quiet, Atmospheric Night Scene",
+
+                text:
+                    "Unlike the typical bustling crowds of daytime shopping streets, this moody late-night shot captures a calm, reflective ambiance. Distant silhouettes of pedestrians, subtle atmospheric haze, and intricate surface patterns on the wet ground give the scene a cinematic, cyberpunk-inspired aesthetic."
+            }
+
+        ]
     },
+
 
     {
         file: "12.jpeg",
+
         title:
-        "Night Life in China"
+            "Moody Night in Urban China",
+
+        sections: [
+
+            {
+                heading:
+                    "Neon Vibrancy on Wet Streets",
+
+                text:
+                    "Captured on a rainy night in Chengdu’s commercial district near Chunxi Road, this scene showcases the vivid neon glow of city life reflecting off damp pavement. Bright signboards in fiery reds, cyans, and warm yellows pierce the darkness, casting long, colorful reflections across the slick ground after a fresh downpour."
+            },
+
+            {
+                heading:
+                    "Interplay of Modernity and Construction",
+
+                text:
+                    "The composition balances classic urban architecture with continuous development. Anchored by a prominent clock tower building, the skyline features an illuminated construction crane glowing bright yellow in the background—a symbolic nod to the rapid pace of urban expansion and nightlife development in modern Chinese cities."
+            },
+
+            {
+                heading:
+                    "Quiet, Atmospheric Night Scene",
+
+                text:
+                    "Unlike the typical bustling crowds of daytime shopping streets, this moody late-night shot captures a calm, reflective ambiance. Distant silhouettes of pedestrians, subtle atmospheric haze, and intricate surface patterns on the wet ground give the scene a cinematic, cyberpunk-inspired aesthetic."
+            }
+
+        ]
     },
+
 
     {
         file: "13.jpeg",
+
         title:
-        "Giant Wild Goose Pagoda, Xi'an"
+            "Giant Wild Goose Pagoda in Xi'an",
+
+        sections: [
+
+            {
+                heading:
+                    "Majestic Ancient Architecture",
+
+                text:
+                    "Captured from a low angle, this image displays the imposing structure of the Giant Wild Goose Pagoda (Dayan Pagoda) in Xi’an, Shaanxi Province. Built during the Tang dynasty, the multi-tiered brick pagoda rises commandingly against a clear, pale blue sky, showcasing classic ancient Chinese Buddhist architecture with its distinct square layers and arched windows."
+            },
+
+            {
+                heading:
+                    "Earthy Textures and Historic Detailing",
+
+                text:
+                    "The pagoda rests on a solid, fortified stone base surrounded by carved balustrades. The warm, earthy tone of the aged brickwork catches the light, highlighting the historic craftsmanship, subtle cornices, and architectural symmetry that have endured for centuries."
+            },
+
+            {
+                heading:
+                    "Serene Foreground Surroundings",
+
+                text:
+                    "In the foreground, manicured hedges, stone retaining walls, and a delicate tree adorned with colorful decorative lanterns flank the site. The vibrant pink and yellow ornaments add a charming touch of color, contrasting gently with the grand, timeless monument in the background."
+            }
+
+        ]
     },
+
 
     {
         file: "14.jpeg",
+
         title:
-        "Pearl Tower, Shanghai, China"
+            "Oriental Pearl Tower in Daytime Light",
+
+        sections: [
+
+            {
+                heading:
+                    "Iconic Architectural Monument",
+
+                text:
+                    "Shot from a dramatic low angle, this photo highlights the towering scale of Shanghai’s famous Oriental Pearl Radio & Television Tower. The unique design—featuring distinct futuristic spheres linked by massive column legs—stands out as a defining landmark of the Lujiazui financial district."
+            },
+
+            {
+                heading:
+                    "Striking Metallic Details",
+
+                text:
+                    "Bright sunlight catches the upper and middle spheres, bringing out the vibrant pink-and-magenta geometric panels wrapped around the concrete shaft. The contrast between the metallic silver finishes, reddish hues, and smooth concrete highlights the intricate engineering of the structure."
+            },
+
+            {
+                heading:
+                    "Clear Blue Backdrop",
+
+                text:
+                    "Set against a vivid, cloudless blue sky, the tower stretches gracefully toward the top of the frame. The crisp atmospheric clarity accentuates the sharp lines and grand scale of one of China’s most recognizable modern symbols."
+            }
+
+        ]
     },
+
 
     {
         file: "15.jpeg",
+
         title:
-        "Unicorn Paper Art, Shanghai, China"
+            "Unicorn Paper Art in Shanghai, China",
+
+        sections: [
+
+            {
+                heading:
+                    "A Small Piece of Shanghai",
+
+                text:
+                    "A delicate paper unicorn captured in Shanghai, showcasing the creativity and craftsmanship found in the city’s artistic spaces. Its simple form and intricate details offer a quiet contrast to the towering architecture and energetic streets surrounding it."
+            }
+
+        ]
     }
 
 ];
@@ -1323,86 +1801,159 @@ const gallery =
     document.getElementById("gallery");
 
 
-photos.forEach(function(photo, index) {
+photos.forEach(
+    function(photo, index) {
 
-    const card =
-        document.createElement("article");
+        const card =
+            document.createElement("article");
 
-    card.className = "photo-card";
+        card.className =
+            "photo-card";
 
 
-    card.innerHTML = `
+        let storyHTML = "";
 
-        <div class="image-container">
 
-            <img
-                src="Photos/${photo.file}"
-                alt="${photo.title}"
-                draggable="false"
-                onclick="openViewer(${index})">
+        photo.sections.forEach(
+            function(section) {
 
-            <div class="image-overlay">
+                storyHTML += `
 
-                <div class="view-circle">
-                    VIEW
+                    <div class="story-heading">
+
+                        ${section.heading}
+
+                    </div>
+
+                    <p>
+
+                        ${section.text}
+
+                    </p>
+
+                `;
+
+            }
+        );
+
+
+        card.innerHTML = `
+
+            <div class="image-container">
+
+                <img
+                    src="Photos/${photo.file}"
+                    alt="${photo.title}"
+                    draggable="false"
+                    onclick="openViewer(${index})">
+
+                <div class="image-overlay">
+
+                    <div class="view-circle">
+
+                        VIEW
+
+                    </div>
+
                 </div>
 
             </div>
 
-        </div>
+
+            <div class="photo-info">
+
+                <div class="photo-top">
+
+                    <div class="photo-number">
+
+                        ${String(index + 1)
+                            .padStart(2, "0")}
+
+                    </div>
 
 
-        <div class="photo-info">
+                    <div class="photo-title">
 
-            <div class="photo-number">
+                        <h3>
 
-                ${String(index + 1).padStart(2, "0")}
+                            ${photo.title}
+
+                        </h3>
+
+                        <p>
+
+                            VEYLORA Original
+
+                        </p>
+
+                    </div>
+
+                </div>
+
+
+                <div class="photo-actions">
+
+                    <button
+                        onclick="toggleStory(${index})">
+
+                        READ STORY
+
+                    </button>
+
+
+                    <button
+                        onclick="openViewer(${index})">
+
+                        VIEW FULL IMAGE
+
+                    </button>
+
+
+                    <button
+                        onclick="downloadPhoto(${index})">
+
+                        DOWNLOAD
+
+                    </button>
+
+                </div>
+
+
+                <div
+                    class="story"
+                    id="story-${index}">
+
+                    ${storyHTML}
+
+                </div>
 
             </div>
 
-
-            <div class="photo-title">
-
-                <h3>
-                    ${photo.title}
-                </h3>
-
-                <p>
-                    VEYLORA Original
-                </p>
-
-            </div>
+        `;
 
 
-            <div class="photo-actions">
+        gallery.appendChild(card);
 
-                <button
-                    class="view-full-btn"
-                    onclick="openViewer(${index})">
-
-                    VIEW FULL IMAGE
-
-                </button>
+    }
+);
 
 
-                <button
-                    class="download-btn"
-                    onclick="requestDownload(${index})">
 
-                    DOWNLOAD
+/* =====================================================
+   READ STORY
+===================================================== */
 
-                </button>
+function toggleStory(index) {
 
-            </div>
+    const story =
+        document.getElementById(
+            "story-" + index
+        );
 
-        </div>
-    `;
 
+    story.classList.toggle("active");
 
-    gallery.appendChild(card);
-
-});
-
+}
 
 
 /* =====================================================
@@ -1411,144 +1962,86 @@ photos.forEach(function(photo, index) {
 
 function openViewer(index) {
 
-    const photo = photos[index];
+    const photo =
+        photos[index];
 
-    document.getElementById("viewerImage").src =
-        "Photos/" + photo.file;
 
-    document.getElementById("viewerTitle").textContent =
+    document.getElementById(
+        "viewerImage"
+    ).src =
+        "Photos/" +
+        photo.file;
+
+
+    document.getElementById(
+        "viewerTitle"
+    ).textContent =
         photo.title;
 
-    document.getElementById("viewer").classList.add("active");
 
-    document.body.style.overflow = "hidden";
+    document.getElementById(
+        "viewer"
+    ).classList.add(
+        "active"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
 }
 
 
 function closeViewer() {
 
-    document.getElementById("viewer").classList.remove("active");
+    document.getElementById(
+        "viewer"
+    ).classList.remove(
+        "active"
+    );
 
-    document.body.style.overflow = "auto";
+
+    document.body.style.overflow =
+        "auto";
 }
-
 
 
 /* =====================================================
    DOWNLOAD
 ===================================================== */
 
-let selectedPhoto = null;
+function downloadPhoto(index) {
+
+    const photo =
+        photos[index];
 
 
-function requestDownload(index) {
+    const link =
+        document.createElement("a");
 
-    selectedPhoto = index;
-
-    openLogin();
-}
-
-
-function downloadPhoto() {
-
-    if (selectedPhoto === null) {
-        return;
-    }
-
-    const photo = photos[selectedPhoto];
-
-    const link = document.createElement("a");
 
     link.href =
-        "Photos/" + photo.file;
+        "Photos/" +
+        photo.file;
+
 
     link.download =
-        photo.title + ".jpeg";
+        photo.title +
+        ".jpeg";
 
-    document.body.appendChild(link);
+
+    document.body.appendChild(
+        link
+    );
+
 
     link.click();
 
-    document.body.removeChild(link);
 
-    selectedPhoto = null;
-}
-
-
-
-/* =====================================================
-   LOGIN MODAL
-===================================================== */
-
-function openLogin() {
-
-    document.getElementById("loginModal")
-        .classList.add("active");
-
-    document.body.style.overflow = "hidden";
-}
-
-
-function closeLogin() {
-
-    document.getElementById("loginModal")
-        .classList.remove("active");
-
-    document.body.style.overflow = "auto";
-}
-
-
-
-/* =====================================================
-   DEMO LOGIN
-===================================================== */
-
-function demoLogin(provider) {
-
-    const message =
-        document.getElementById("demoMessage");
-
-    message.innerHTML =
-
-        "DEMO LOGIN SUCCESSFUL.<br><br>" +
-
-        "You selected: " +
-        provider +
-        "<br><br>" +
-
-        "Your photograph will now download.";
-
-
-    setTimeout(function() {
-
-        closeLogin();
-
-        downloadPhoto();
-
-    }, 1000);
-}
-
-
-
-/* =====================================================
-   DEMO SIGN UP
-===================================================== */
-
-function demoSignup() {
-
-    const message =
-        document.getElementById("demoMessage");
-
-    message.innerHTML =
-
-        "DEMO SIGN UP<br><br>" +
-
-        "The final VEYLORA version " +
-        "will contain the real account " +
-        "registration system.";
+    document.body.removeChild(
+        link
+    );
 
 }
-
 
 
 /* =====================================================
@@ -1559,17 +2052,16 @@ document.addEventListener(
     "keydown",
     function(event) {
 
-        if (event.key === "Escape") {
+        if (
+            event.key === "Escape"
+        ) {
 
             closeViewer();
-
-            closeLogin();
 
         }
 
     }
 );
-
 
 
 /* =====================================================
@@ -1580,7 +2072,9 @@ document.addEventListener(
     "dragstart",
     function(event) {
 
-        if (event.target.tagName === "IMG") {
+        if (
+            event.target.tagName === "IMG"
+        ) {
 
             event.preventDefault();
 
@@ -1588,7 +2082,6 @@ document.addEventListener(
 
     }
 );
-
 
 
 /* =====================================================
@@ -1599,7 +2092,9 @@ document.addEventListener(
     "contextmenu",
     function(event) {
 
-        if (event.target.tagName === "IMG") {
+        if (
+            event.target.tagName === "IMG"
+        ) {
 
             event.preventDefault();
 
@@ -1609,6 +2104,7 @@ document.addEventListener(
 );
 
 </script>
+
 
 </body>
 
