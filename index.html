@@ -55,9 +55,6 @@ body {
     z-index: 1000;
 }
 
-
-/* SIMPLE VEYLORA LOGO */
-
 .logo {
     color: #ffffff;
     text-decoration: none;
@@ -69,9 +66,6 @@ body {
 
     letter-spacing: 6px;
 }
-
-
-/* NAVIGATION */
 
 .nav-links {
     display: flex;
@@ -312,14 +306,9 @@ body {
 
 .image-container {
     position: relative;
-
     overflow: hidden;
-
     background: #111;
 }
-
-
-/* FULL COLOR */
 
 .image-container img {
     width: 100%;
@@ -336,9 +325,6 @@ body {
     transition: transform .8s ease;
 }
 
-
-/* Smaller images */
-
 .photo-card:nth-child(2) img,
 .photo-card:nth-child(3) img,
 .photo-card:nth-child(7) img,
@@ -346,9 +332,6 @@ body {
 .photo-card:nth-child(9) img {
     height: 430px;
 }
-
-
-/* Hover */
 
 .photo-card:hover img {
     transform: scale(1.04);
@@ -374,6 +357,8 @@ body {
     opacity: 0;
 
     transition: .4s;
+
+    cursor: pointer;
 }
 
 .photo-card:hover .image-overlay {
@@ -396,6 +381,8 @@ body {
     font-size: 9px;
 
     letter-spacing: 1px;
+
+    pointer-events: none;
 }
 
 
@@ -589,6 +576,8 @@ body {
     font-size: 45px;
 
     cursor: pointer;
+
+    z-index: 10;
 }
 
 .viewer-title {
@@ -654,7 +643,9 @@ body {
 }
 
 
-/* CREATOR */
+/* =========================
+   CREATOR
+========================= */
 
 .creator {
     margin-top: 45px;
@@ -1044,7 +1035,7 @@ footer {
 
 
 /* =========================
-   PHOTO INFORMATION
+   PHOTO DATA
 ========================= */
 
 const photos = [
@@ -1053,18 +1044,14 @@ const photos = [
         file: "1.jpeg",
         title: "Giant Panda Enclosure Showcase",
         sections: [
-            [
-                "A Peaceful Moment",
-                "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."
-            ],
-            [
-                "Immersive Natural Habitat",
-                "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."
-            ],
-            [
-                "Golden Hour Ambience",
-                "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."
-            ]
+            ["A Peaceful Moment",
+            "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."],
+
+            ["Immersive Natural Habitat",
+            "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."],
+
+            ["Golden Hour Ambience",
+            "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."]
         ]
     },
 
@@ -1072,18 +1059,14 @@ const photos = [
         file: "2.jpeg",
         title: "Giant Panda Enclosure Showcase",
         sections: [
-            [
-                "A Peaceful Moment",
-                "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."
-            ],
-            [
-                "Immersive Natural Habitat",
-                "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."
-            ],
-            [
-                "Golden Hour Ambience",
-                "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."
-            ]
+            ["A Peaceful Moment",
+            "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."],
+
+            ["Immersive Natural Habitat",
+            "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."],
+
+            ["Golden Hour Ambience",
+            "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."]
         ]
     },
 
@@ -1091,18 +1074,14 @@ const photos = [
         file: "3.jpeg",
         title: "Giant Panda Enclosure Showcase",
         sections: [
-            [
-                "A Peaceful Moment",
-                "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log. Its striking black-and-white coat stands out against the rich, mulch-covered ground, capturing a serene, quiet moment in its daily routine."
-            ],
-            [
-                "Immersive Natural Habitat",
-                "The enclosure is thoughtfully designed with dense bamboo thickets, leafy shrubs, and slender trees. This lush foliage replicates the panda’s natural forest environment, offering privacy, shade, and space to explore."
-            ],
-            [
-                "Golden Hour Ambience",
-                "Framed by a tall timber wall, the entire habitat is bathed in a warm, late-afternoon light. The golden glow highlights the rich earth tones and natural greenery, giving the scene an inviting, vibrant atmosphere."
-            ]
+            ["A Peaceful Moment",
+            "At the heart of the exhibit, a giant panda rests comfortably near a large wooden log, capturing a serene moment in its daily routine."],
+
+            ["Immersive Natural Habitat",
+            "Dense bamboo, leafy shrubs and slender trees create a habitat inspired by the panda’s natural forest environment."],
+
+            ["Golden Hour Ambience",
+            "Warm late-afternoon light highlights the earth tones and greenery, giving the scene an inviting atmosphere."]
         ]
     },
 
@@ -1110,18 +1089,14 @@ const photos = [
         file: "4.jpeg",
         title: "Shanghai Lujiazui Skyline at Night",
         sections: [
-            [
-                "Iconic Architectural Landmarks",
-                "This striking night view showcases the skyline of Shanghai’s Lujiazui financial district as seen across the Huangpu River. Dominating the center-left is the famous Oriental Pearl TV Tower glowing in vivid pink and purple, while the towering Shanghai Tower and the trapezoidal Shanghai World Financial Center illuminate the skyline to the right."
-            ],
-            [
-                "Vibrant City Lights",
-                "The surrounding skyscrapers are fully illuminated with a mix of colorful LED displays, neon facades, and architectural lighting. The rich palette of deep reds, bright purples, and warm golds creates a dramatic, futuristic contrast against the dark night sky."
-            ],
-            [
-                "Dazzling River Reflections",
-                "In the foreground, the dark, rippling waters of the Huangpu River reflect the brilliant city lights from above. The water creates a shimmering tapestry of red and purple light, adding depth and energy to the panoramic urban landscape."
-            ]
+            ["Iconic Architectural Landmarks",
+            "This striking night view showcases Shanghai’s Lujiazui financial district across the Huangpu River. The Oriental Pearl TV Tower glows in vivid pink and purple while the Shanghai Tower and Shanghai World Financial Center illuminate the skyline."],
+
+            ["Vibrant City Lights",
+            "Colorful LED displays, neon facades and architectural lighting create a dramatic palette of reds, purples and warm golds."],
+
+            ["Dazzling River Reflections",
+            "The Huangpu River reflects the brilliant city lights, creating a shimmering tapestry of color across the water."]
         ]
     },
 
@@ -1129,18 +1104,14 @@ const photos = [
         file: "5.jpeg",
         title: "Frozen Moat at the Forbidden City, Beijing",
         sections: [
-            [
-                "A Winter Contrast in Imperial History",
-                "This serene view captures the iconic moat encircling the Forbidden City in Beijing during the winter months. A striking visual boundary splits the canal: one side is capped with a thick layer of frosted white ice, while the open water beside it reflects the brilliant blue sky and surrounding historical structures."
-            ],
-            [
-                "Historic Architecture and Natural Splendor",
-                "Along the right bank stands a classic imperial red wall topped with traditional grey tiles, anchoring the photo in rich Chinese architectural heritage. Bare winter trees line the left embankment, framing the long stretch of the canal and adding a tranquil, seasonal atmosphere to the historic precinct."
-            ],
-            [
-                "Crisp Atmosphere and Mirror Reflections",
-                "Under a clear, sunny sky, the still water mirrors the intense blue overhead and the dark outlines of the surrounding trees and buildings. Ducks swimming in the open water add subtle life to this quiet, crisp winter landscape."
-            ]
+            ["A Winter Contrast in Imperial History",
+            "This serene view captures the moat surrounding the Forbidden City during winter. Thick white ice contrasts with open water reflecting the blue sky."],
+
+            ["Historic Architecture and Natural Splendor",
+            "A classic imperial red wall topped with traditional grey tiles anchors the scene in Chinese architectural heritage."],
+
+            ["Crisp Atmosphere and Mirror Reflections",
+            "Clear winter light creates beautiful reflections in the open water, while ducks add subtle life to the quiet landscape."]
         ]
     },
 
@@ -1148,18 +1119,14 @@ const photos = [
         file: "6.jpeg",
         title: "Himalayan Panorama from the Flight Path",
         sections: [
-            [
-                "Majestic Snow-Capped Peaks",
-                "Framed by the wing of a Sichuan Airlines aircraft, the snow-covered peaks of the Himalayas form a continuous, gleaming horizon above the clouds. Rising dramatically against the deep blue sky, these formidable summits—including Mount Everest—showcase the breathtaking grandeur of the world’s highest mountain range."
-            ],
-            [
-                "Layered Aerial Perspective",
-                "Below the towering snow peaks, sprawling green hills, valleys, and subtle cloud layers stretch across the landscape. The dramatic elevation drop highlights the immense scale of the terrain, offering a rare bird’s-eye view of the geographical transition between Nepal and the Tibetan Plateau."
-            ],
-            [
-                "Clear Sky Above the Clouds",
-                "Cruising at high altitude, the aircraft glides through crisp, clear skies, providing uninterrupted views of the natural wonder below. The vibrant red winglet adds a sharp pop of color, contrasting beautifully with the deep azure sky and the tranquil tones of the earth beneath."
-            ]
+            ["Majestic Snow-Capped Peaks",
+            "Framed by the wing of a Sichuan Airlines aircraft, snow-covered Himalayan peaks form a gleaming horizon above the clouds."],
+
+            ["Layered Aerial Perspective",
+            "Green hills, valleys and cloud layers stretch beneath the towering peaks, revealing the immense scale of the landscape."],
+
+            ["Clear Sky Above the Clouds",
+            "The aircraft cruises through clear skies while the vibrant red winglet contrasts against the deep blue sky."]
         ]
     },
 
@@ -1167,18 +1134,14 @@ const photos = [
         file: "7.jpeg",
         title: "Cold Water Stream in the Annapurna Range",
         sections: [
-            [
-                "Pristine Mountain Flow",
-                "Originating from the high Himalayan peaks of the Annapurna range, a clear, crisp stream trickles through mossy rocks into a quiet forest pool. The crystal-clear water cascades gently over natural rock formations, bubbling with fresh mountain run-off in a serene display of nature."
-            ],
-            [
-                "Lush Himalayan Canopy",
-                "Enclosed by a dense, vibrant green jungle, the surrounding landscape thrives with wild ferns, overgrown foliage, and tall trees. The deep greenery frames the stream path, accentuating the hidden, untouched feel of this tropical mountain forest."
-            ],
-            [
-                "Earthy Natural Textures",
-                "Large, moss-covered boulders sit alongside reddish-brown rocks and soil, adding rich color and texture to the scene. Soft sunlight filters through the overhead canopy, highlighting the glint of sunlight on the water’s surface and bringing out the natural beauty of the Himalayan ecosystem."
-            ]
+            ["Pristine Mountain Flow",
+            "A clear mountain stream flows gently over mossy rocks into a quiet forest pool."],
+
+            ["Lush Himalayan Canopy",
+            "Dense greenery, ferns and tall trees surround the stream and create a secluded Himalayan atmosphere."],
+
+            ["Earthy Natural Textures",
+            "Moss-covered boulders, reddish rocks and filtered sunlight add rich texture to the scene."]
         ]
     },
 
@@ -1186,18 +1149,14 @@ const photos = [
         file: "8.jpeg",
         title: "Cold Water Stream in the Annapurna Range",
         sections: [
-            [
-                "Pristine Mountain Flow",
-                "Originating from the high Himalayan peaks of the Annapurna range, a clear, crisp stream trickles through mossy rocks into a quiet forest pool. The crystal-clear water cascades gently over natural rock formations, bubbling with fresh mountain run-off in a serene display of nature."
-            ],
-            [
-                "Lush Himalayan Canopy",
-                "Enclosed by a dense, vibrant green jungle, the surrounding landscape thrives with wild ferns, overgrown foliage, and tall trees. The deep greenery frames the stream path, accentuating the hidden, untouched feel of this tropical mountain forest."
-            ],
-            [
-                "Earthy Natural Textures",
-                "Large, moss-covered boulders sit alongside reddish-brown rocks and soil, adding rich color and texture to the scene. Soft sunlight filters through the overhead canopy, highlighting the glint of sunlight on the water’s surface and bringing out the natural beauty of the Himalayan ecosystem."
-            ]
+            ["Pristine Mountain Flow",
+            "Crystal-clear Himalayan water flows gently through natural rock formations."],
+
+            ["Lush Himalayan Canopy",
+            "Dense green foliage surrounds the stream, creating a hidden natural environment."],
+
+            ["Earthy Natural Textures",
+            "Moss-covered stones and filtered sunlight highlight the natural beauty of the landscape."]
         ]
     },
 
@@ -1205,18 +1164,14 @@ const photos = [
         file: "9.jpeg",
         title: "Tranquil Forest Clearing and Shelter",
         sections: [
-            [
-                "A Peaceful Woodland Pavilion",
-                "Nestled deep within a dense, lush forest, a small, open-sided stone shelter with a dark sloped roof sits quietly in the background. Surrounded by towering trees, the structure offers a serene spot for rest and shelter along a secluded trail."
-            ],
-            [
-                "Vibrant Canopy and Fallen Leaves",
-                "The ground in the foreground is completely carpeted with dry, fallen brown leaves, creating a warm contrast against the cool greens of the forest. Above, a thick canopy of tall trees stretches across the frame, filtering the natural light and casting soft shadows throughout the woods."
-            ],
-            [
-                "Secluded and Natural Atmosphere",
-                "A subtle dirt path weaves past the pavilion and towards a stone feature on the right, leading deeper into the quiet woodland. The rich green foliage and undisturbed surrounding environment evoke a calm, peaceful escape into nature."
-            ]
+            ["A Peaceful Woodland Pavilion",
+            "A small open-sided stone shelter rests quietly within a dense forest, offering a peaceful place for rest."],
+
+            ["Vibrant Canopy and Fallen Leaves",
+            "Dry brown leaves cover the ground while a thick canopy filters natural light."],
+
+            ["Secluded and Natural Atmosphere",
+            "A subtle dirt path leads deeper into the quiet woodland, surrounded by rich green foliage."]
         ]
     },
 
@@ -1224,18 +1179,14 @@ const photos = [
         file: "10.jpeg",
         title: "Moody Night in Urban China",
         sections: [
-            [
-                "Neon Vibrancy on Wet Streets",
-                "Captured on a rainy night in Chengdu’s commercial district near Chunxi Road, this scene showcases the vivid neon glow of city life reflecting off damp pavement. Bright signboards in fiery reds, cyans, and warm yellows pierce the darkness, casting long, colorful reflections across the slick ground after a fresh downpour."
-            ],
-            [
-                "Interplay of Modernity and Construction",
-                "The composition balances classic urban architecture with continuous development. Anchored by a prominent clock tower building, the skyline features an illuminated construction crane glowing bright yellow in the background—a symbolic nod to the rapid pace of urban expansion and nightlife development in modern Chinese cities."
-            ],
-            [
-                "Quiet, Atmospheric Night Scene",
-                "Unlike the typical bustling crowds of daytime shopping streets, this moody late-night shot captures a calm, reflective ambiance. Distant silhouettes of pedestrians, subtle atmospheric haze, and intricate surface patterns on the wet ground give the scene a cinematic, cyberpunk-inspired aesthetic."
-            ]
+            ["Neon Vibrancy on Wet Streets",
+            "Rain-soaked streets in Chengdu reflect vivid neon lights in fiery reds, cyans and warm yellows."],
+
+            ["Interplay of Modernity and Construction",
+            "Urban architecture and an illuminated construction crane reflect the rapid development of modern Chinese cities."],
+
+            ["Quiet, Atmospheric Night Scene",
+            "Distant silhouettes, atmospheric haze and wet reflections create a cinematic nighttime mood."]
         ]
     },
 
@@ -1243,18 +1194,14 @@ const photos = [
         file: "11.jpeg",
         title: "Moody Night in Urban China",
         sections: [
-            [
-                "Neon Vibrancy on Wet Streets",
-                "Captured on a rainy night in Chengdu’s commercial district near Chunxi Road, this scene showcases the vivid neon glow of city life reflecting off damp pavement."
-            ],
-            [
-                "Interplay of Modernity and Construction",
-                "The composition balances classic urban architecture with continuous development and the rapid pace of modern Chinese city life."
-            ],
-            [
-                "Quiet, Atmospheric Night Scene",
-                "A calm late-night atmosphere, distant silhouettes and reflections create a cinematic urban mood."
-            ]
+            ["Neon Vibrancy on Wet Streets",
+            "Rainy streets reflect the colorful glow of Chengdu’s nighttime commercial district."],
+
+            ["Modern Chinese Nightlife",
+            "Illuminated buildings and colorful signs create a vivid portrait of urban China after dark."],
+
+            ["Cinematic Atmosphere",
+            "Wet pavement and distant silhouettes create a dramatic late-night atmosphere."]
         ]
     },
 
@@ -1262,18 +1209,14 @@ const photos = [
         file: "12.jpeg",
         title: "Moody Night in Urban China",
         sections: [
-            [
-                "Neon Vibrancy on Wet Streets",
-                "Captured on a rainy night in Chengdu’s commercial district near Chunxi Road, this scene showcases the vivid neon glow of city life reflecting off damp pavement."
-            ],
-            [
-                "Modern Chinese Nightlife",
-                "Colorful lights and illuminated architecture create a dramatic portrait of urban China after dark."
-            ],
-            [
-                "Cinematic Atmosphere",
-                "Wet pavement, distant silhouettes and atmospheric haze give the scene a cinematic character."
-            ]
+            ["Neon Vibrancy on Wet Streets",
+            "Colorful neon lights shimmer across wet streets after rainfall."],
+
+            ["Modern Chinese Nightlife",
+            "The city’s illuminated architecture reveals the energy of modern Chinese nightlife."],
+
+            ["Cinematic Atmosphere",
+            "Reflections, haze and distant figures create a cinematic urban scene."]
         ]
     },
 
@@ -1281,18 +1224,14 @@ const photos = [
         file: "13.jpeg",
         title: "Giant Wild Goose Pagoda in Xi'an",
         sections: [
-            [
-                "Majestic Ancient Architecture",
-                "Captured from a low angle, this image displays the imposing structure of the Giant Wild Goose Pagoda (Dayan Pagoda) in Xi’an, Shaanxi Province. Built during the Tang dynasty, the multi-tiered brick pagoda rises commandingly against a clear, pale blue sky, showcasing classic ancient Chinese Buddhist architecture."
-            ],
-            [
-                "Earthy Textures and Historic Detailing",
-                "The pagoda rests on a solid, fortified stone base surrounded by carved balustrades. The warm, earthy tone of the aged brickwork catches the light, highlighting the historic craftsmanship and architectural symmetry."
-            ],
-            [
-                "Serene Foreground Surroundings",
-                "Manicured hedges, stone retaining walls and colorful decorative lanterns add a charming touch of color around the timeless monument."
-            ]
+            ["Majestic Ancient Architecture",
+            "Captured from a low angle, the Giant Wild Goose Pagoda rises against a pale blue sky, showcasing classic Tang-era Buddhist architecture."],
+
+            ["Earthy Textures and Historic Detailing",
+            "The warm brickwork and architectural details highlight centuries of historic craftsmanship."],
+
+            ["Serene Foreground Surroundings",
+            "Hedges, stone walls and colorful decorative lanterns frame the historic monument."]
         ]
     },
 
@@ -1300,18 +1239,14 @@ const photos = [
         file: "14.jpeg",
         title: "Oriental Pearl Tower in Daytime Light",
         sections: [
-            [
-                "Iconic Architectural Monument",
-                "Shot from a dramatic low angle, this photo highlights the towering scale of Shanghai’s famous Oriental Pearl Radio & Television Tower."
-            ],
-            [
-                "Striking Metallic Details",
-                "Bright sunlight catches the upper and middle spheres, bringing out the vibrant pink-and-magenta geometric panels and metallic finishes."
-            ],
-            [
-                "Clear Blue Backdrop",
-                "Set against a vivid, cloudless blue sky, the tower stretches gracefully toward the top of the frame."
-            ]
+            ["Iconic Architectural Monument",
+            "A dramatic low-angle view highlights the immense scale of Shanghai’s Oriental Pearl Tower."],
+
+            ["Striking Metallic Details",
+            "Sunlight illuminates the tower’s distinctive spheres and vibrant pink-and-magenta geometric details."],
+
+            ["Clear Blue Backdrop",
+            "The tower rises against a vivid cloudless blue sky, emphasizing its distinctive design."]
         ]
     },
 
@@ -1319,10 +1254,8 @@ const photos = [
         file: "15.jpeg",
         title: "Unicorn Paper Art in Shanghai, China",
         sections: [
-            [
-                "A Small Piece of Shanghai",
-                "A delicate paper unicorn captured in Shanghai, showcasing the creativity and craftsmanship found in the city’s artistic spaces. Its intricate form offers a quiet contrast to the towering architecture and energetic streets surrounding it."
-            ]
+            ["A Small Piece of Shanghai",
+            "A delicate paper unicorn captured in Shanghai, showcasing the creativity and craftsmanship found in the city’s artistic spaces."]
         ]
     }
 
@@ -1369,7 +1302,12 @@ photos.forEach((photo, index) => {
                 onclick="openViewer(${index})"
             >
 
-            <div class="image-overlay">
+            <!-- FIXED VIEW BUTTON -->
+
+            <div
+                class="image-overlay"
+                onclick="openViewer(${index})"
+            >
 
                 <div class="view-circle">
                     VIEW
@@ -1439,7 +1377,7 @@ photos.forEach((photo, index) => {
 
 
 /* =========================
-   STORY
+   READ STORY
 ========================= */
 
 function toggleStory(index) {
@@ -1453,7 +1391,7 @@ function toggleStory(index) {
 
 
 /* =========================
-   FULL IMAGE VIEWER
+   OPEN FULL IMAGE
 ========================= */
 
 function openViewer(index) {
@@ -1474,7 +1412,7 @@ function openViewer(index) {
 
 
 /* =========================
-   CLOSE VIEWER
+   CLOSE FULL IMAGE
 ========================= */
 
 function closeViewer() {
@@ -1487,7 +1425,7 @@ function closeViewer() {
 
 
 /* =========================
-   DOWNLOAD PHOTO
+   DOWNLOAD
 ========================= */
 
 function downloadPhoto(index) {
@@ -1510,13 +1448,15 @@ function downloadPhoto(index) {
 
 
 /* =========================
-   ESC KEY
+   ESCAPE KEY
 ========================= */
 
 document.addEventListener("keydown", function(event) {
 
     if (event.key === "Escape") {
+
         closeViewer();
+
     }
 
 });
